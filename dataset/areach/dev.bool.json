@@ -1,0 +1,282 @@
+[
+  {
+    "id": -1990152005808638716,
+    "group": "reachable_action_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 20 cars, numbered consecutively. Currently, the ferry is at l0 location and it is empty. The cars are at locations as follows: c12, c19, c4, c11, c5, c7, c16, and c1 are at l1; c15, c18, c14, c0, c8, c3, c2, c9, c6, c10, c13, and c17 are at l0.",
+    "question": "Is it possible to transition to a state where the action \"board the car c19 at location l1\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -2794295456136976062,
+    "group": "reachable_action_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 20 cars, numbered consecutively. Currently, the ferry is at l0, with the car c2 on board. The cars are at locations as follows: c12, c14, c18, c19, c4, c11, c5, c7, c16, and c17 are at l1; c15, c8, c0, c3, c9, c6, c10, c13, and c1 are at l0.",
+    "question": "Is it possible to transition to a state where the action \"debark the car c8 from the ferry to location l1\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -4761836809351361279,
+    "group": "reachable_action_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 20 cars, numbered consecutively. Currently, the ferry is at l1 location and it is empty. The cars are at locations as follows: c12, c14, c1, c19, c4, c11, c5, c7, and c17 are at l1; c15, c18, c0, c8, c2, c3, c9, c6, c10, c13, and c16 are at l0.",
+    "question": "Is it possible to transition to a state where the action \"unload the car c7 from the ferry to location l0\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -829731445227953700,
+    "group": "reachable_action_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 3 locations and 2 cars, numbered consecutively. Currently, the ferry is at l0, with the car c0 on board. The cars are at locations as follows: c1 is at l1.",
+    "question": "Is it possible to transition to a state where the action \"embark the car c1 at location l1 into the airplane\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": -2643254463469407116,
+    "group": "reachable_action_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 20 cars, numbered consecutively. Currently, the ferry is at l1, with the car c5 on board. The cars are at locations as follows: c12, c6, c14, c2, c18, c19, c8, c4, c11, c7, c16, c17, and c1 are at l1; c15, c0, c3, c9, c10, and c13 are at l0.",
+    "question": "Is it possible to transition to a state where the action \"travel by sea from location l0 to location l1\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": 2099802504790024603,
+    "group": "reachable_action_bool",
+    "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 4 locations across 2 cities. The locations are in cities as follows: l0-1 and l0-0 are in c0; l1-0 and l1-1 are in c1. Currently, p0 and a0 are at l0-0, t0 is at l0-1, p1, p2, and t1 are at l1-0, p3 is in t0.",
+    "question": "Is it possible to transition to a state where the action \"remove the object p1 from the truck t1 and place it on the location l1-0\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": 2875780928092188787,
+    "group": "reachable_action_bool",
+    "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 3 trucks and 1 airplane, as well as 4 packages. There are 9 locations across 3 cities. The locations are in cities as follows: l0-2, l0-1, and l0-0 are in c0; l2-1, l2-0, and l2-2 are in c2; l1-2, l1-0, and l1-1 are in c1. Currently, p2, p1, a0, and t2 are at l2-0, p3 and t1 are at l1-2, t0 is at l0-0, p0 is in t2.",
+    "question": "Is it possible to transition to a state where the action \"navigate the truck t0 from location l0-2 in city c0 to location l0-1 in the next city\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": -1011594381339674512,
+    "group": "reachable_action_bool",
+    "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 3 trucks and 1 airplane, as well as 4 packages. There are 9 locations across 3 cities. The locations are in cities as follows: l0-2, l0-1, and l0-0 are in c0; l2-1, l2-0, and l2-2 are in c2; l1-2, l1-0, and l1-1 are in c1. Currently, p0 and t2 are at l2-1, t0 is at l0-1, a0 is at l2-0, t1 is at l1-0, p2 is at l0-0, p1 is in t1, p3 is in t2.",
+    "question": "Is it possible to transition to a state where the action \"navigate the truck l2-1 from its current location t1 in city c1 to the new location l1-0 within the same city\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": 2902832396618372313,
+    "group": "reachable_action_bool",
+    "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 3 trucks and 1 airplane, as well as 4 packages. There are 9 locations across 3 cities. The locations are in cities as follows: l0-2, l0-1, and l0-0 are in c0; l2-1, l2-0, and l2-2 are in c2; l1-2, l1-0, and l1-1 are in c1. Currently, p0 is at l2-1, t1 and p3 are at l1-0, a0 and t0 are at l0-0, t2 is at l2-0, p2 is in t0, p1 is in a0.",
+    "question": "Is it possible to transition to a state where the action \"navigate the truck t1 which is in location l1-1 in city c1 to another location l1-2 in the same city\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -5412331473698620602,
+    "group": "reachable_action_bool",
+    "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 6 locations across 2 cities. The locations are in cities as follows: l0-2, l0-1, and l0-0 are in c0; l1-2, l1-0, and l1-1 are in c1. Currently, a0, p3, and t0 are at l0-0, t1 is at l1-2, p1 and p2 are in t1, p0 is in t0.",
+    "question": "Is it possible to transition to a state where the action \"drive the truck t0 in city c0 from location l0-1 to location l0-2\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": 88880427143898719,
+    "group": "reachable_action_bool",
+    "context": "This is a blocksworld domain where blocks can be placed on top of each other or on the table. There is one robotic arm that can move the block. There are 5 blocks. Currently, the robotic arm is holding block_5. The following block(s) are on the table: block_1 and block_3. The following block(s) are stacked on top of another block: block_2 is on block_4 and block_4 is on block_1.",
+    "question": "Is it possible to transition to a state where the action \"stack the object block_5 on top of the object block_5\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": -732791368214372788,
+    "group": "reachable_action_bool",
+    "context": "This is a blocksworld domain where blocks can be placed on top of each other or on the table. There is one robotic arm that can move the block. There are 5 blocks. Currently, the robotic arm is holding block_3. The following block(s) are on the table: block_1 and block_5. The following block(s) are stacked on top of another block: block_2 is on block_4 and block_4 is on block_5.",
+    "question": "Is it possible to transition to a state where the action \"stack object block_1 on top of object block_3\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -946383691690142322,
+    "group": "reachable_action_bool",
+    "context": "This is a blocksworld domain where blocks can be placed on top of each other or on the table. There is one robotic arm that can move the block. There are 5 blocks. Currently, the robotic arm is empty. The following block(s) are on the table: block_2 and block_3. The following block(s) are stacked on top of another block: block_5 is on block_2, block_4 is on block_5, and block_1 is on block_4.",
+    "question": "Is it possible to transition to a state where the action \"stack the object block_3 on top of the object block_1\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -100048758651598240,
+    "group": "reachable_action_bool",
+    "context": "This is a blocksworld domain where blocks can be placed on top of each other or on the table. There is one robotic arm that can move the block. There are 5 blocks. Currently, the robotic arm is holding block_3. The following block(s) is on the table: block_5. The following block(s) are stacked on top of another block: block_2 is on block_4, block_4 is on block_5, and block_1 is on block_2.",
+    "question": "Is it possible to transition to a state where the action \"put the key block_2 at the current position place block_4\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": 8239769062387847177,
+    "group": "reachable_action_bool",
+    "context": "This is a blocksworld domain where blocks can be placed on top of each other or on the table. There is one robotic arm that can move the block. There are 5 blocks. Currently, the robotic arm is holding block_5. The following block(s) are on the table: block_2 and block_3. The following block(s) are stacked on top of another block: block_4 is on block_3 and block_1 is on block_2.",
+    "question": "Is it possible to transition to a state where the action \"unstack the object block_1 from the object block_2\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": 6488288210978008810,
+    "group": "reachable_action_bool",
+    "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-0 is of shape shape0, Key key0-1 is of shape shape0.  Currently, the robot is at position f3-2f and its arm is empty. All the positions are open except the following: f2-0f has shape0 shaped lock, f4-2f has shape0 shaped lock. Key key0-0 is at position f2-2f. Key key0-1 is at position f1-3f.",
+    "question": "Is it possible to transition to a state where the action \"transition from the current position f3-4f to the next position f4-4f\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": 3152774823157808789,
+    "group": "reachable_action_bool",
+    "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-0 is of shape shape0, Key key0-1 is of shape shape0.  Currently, the robot is at position f0-1f and is holding key0-0. All the positions are open except the following: f3-4f has shape0 shaped lock. Key key0-1 is at position f3-0f.",
+    "question": "Is it possible to transition to a state where the action \"transition from the current position f2-1f to the next position f2-2f\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -6797981648364313471,
+    "group": "reachable_action_bool",
+    "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 3 keys in 1 different shapes: Key key0-0 is of shape shape0, Key key0-2 is of shape shape0, Key key0-1 is of shape shape0.  Currently, the robot is at position f4-4f and its arm is empty. All the positions are open except the following: f2-1f has shape0 shaped lock, f2-2f has shape0 shaped lock, f0-1f has shape0 shaped lock. Key key0-2 is at position f1-2f. Key key0-0 is at position f4-1f. Key key0-1 is at position f2-4f.",
+    "question": "Is it possible to transition to a state where the action \"acquire the key f1-3f from the place f0-4f\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": -747865961698299762,
+    "group": "reachable_action_bool",
+    "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 3 keys in 1 different shapes: Key key0-0 is of shape shape0, Key key0-2 is of shape shape0, Key key0-1 is of shape shape0.  Currently, the robot is at position f1-1f and is holding key0-2. All the positions are open except the following: f2-2f has shape0 shaped lock. Key key0-0 is at position f1-1f. Key key0-1 is at position f2-4f.",
+    "question": "Is it possible to transition to a state where the action \"acquire the key key0-0 from the place f1-1f\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -4236453997252481340,
+    "group": "reachable_action_bool",
+    "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-0 is of shape shape0, Key key0-1 is of shape shape0.  Currently, the robot is at position f0-3f and its arm is empty. All the positions are open except the following: f0-0f has shape0 shaped lock. Key key0-1 is at position f3-0f. Key key0-0 is at position f0-4f.",
+    "question": "Is it possible to transition to a state where the action \"pick up the key key0-0 at the current position place f2-0f and loose the key key0-0 being held\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": -4019686134657801489,
+    "group": "reachable_action_bool",
+    "context": "A set of robots use different colors to paint patterns in floor tiles. The robots can move around the floor tiles in four directions (up, down, left and right). Robots paint with one color at a time, but can change their spray guns to any available color. However, robots can only paint the tile that is in front (up) and behind (down) them, and once a tile has been painted no robot can stand on it. Robots need to paint a grid with black and white, where the cell color is alternated always. There are 2 robots and 9 tiles. The tiles locations are: tile_8 is to the right of tile_7, tile_3 is to the right of tile_2, tile_9 is to the right of tile_8, tile_5 is to the right of tile_4, tile_2 is to the right of tile_1, and tile_6 is to the right of tile_5. Further, tile_6 is down from tile_9, tile_1 is down from tile_4, tile_5 is down from tile_8, tile_4 is down from tile_7, tile_3 is down from tile_6, and tile_2 is down from tile_5 Currently, robot robot2 is at tile_3 and holding color white and robot robot1 is at tile_1 and holding color black; tile_2 and tile_4 are clear; tile_9 is painted black, tile_7 is painted black, tile_8 is painted white, tile_5 is painted black, and tile_6 is painted white.",
+    "question": "Is it possible to transition to a state where the action \"repaint the car robot1 from color black to color white\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": -7587184468569350642,
+    "group": "reachable_action_bool",
+    "context": "A set of robots use different colors to paint patterns in floor tiles. The robots can move around the floor tiles in four directions (up, down, left and right). Robots paint with one color at a time, but can change their spray guns to any available color. However, robots can only paint the tile that is in front (up) and behind (down) them, and once a tile has been painted no robot can stand on it. Robots need to paint a grid with black and white, where the cell color is alternated always. There are 2 robots and 12 tiles. The tiles locations are: tile_8 is to the right of tile_7, tile_3 is to the right of tile_2, tile_11 is to the right of tile_10, tile_9 is to the right of tile_8, tile_5 is to the right of tile_4, tile_2 is to the right of tile_1, tile_12 is to the right of tile_11, and tile_6 is to the right of tile_5. Further, tile_6 is down from tile_9, tile_7 is down from tile_10, tile_5 is down from tile_8, tile_8 is down from tile_11, tile_4 is down from tile_7, tile_9 is down from tile_12, tile_3 is down from tile_6, tile_1 is down from tile_4, and tile_2 is down from tile_5 Currently, robot robot2 is at tile_6 and holding color black and robot robot1 is at tile_2 and holding color white; tile_3, tile_1, tile_5, tile_9, and tile_8 are clear; tile_10 is painted white, tile_12 is painted white, tile_7 is painted black, tile_11 is painted black, and tile_4 is painted white.",
+    "question": "Is it possible to transition to a state where the action \"move robot robot2 from tile tile_3 to the left tile tile tile_2\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": 7269270248891740603,
+    "group": "reachable_action_bool",
+    "context": "A set of robots use different colors to paint patterns in floor tiles. The robots can move around the floor tiles in four directions (up, down, left and right). Robots paint with one color at a time, but can change their spray guns to any available color. However, robots can only paint the tile that is in front (up) and behind (down) them, and once a tile has been painted no robot can stand on it. Robots need to paint a grid with black and white, where the cell color is alternated always. There are 2 robots and 12 tiles. The tiles locations are: tile_8 is to the right of tile_7, tile_3 is to the right of tile_2, tile_11 is to the right of tile_10, tile_9 is to the right of tile_8, tile_5 is to the right of tile_4, tile_2 is to the right of tile_1, tile_12 is to the right of tile_11, and tile_6 is to the right of tile_5. Further, tile_6 is down from tile_9, tile_7 is down from tile_10, tile_5 is down from tile_8, tile_8 is down from tile_11, tile_4 is down from tile_7, tile_9 is down from tile_12, tile_3 is down from tile_6, tile_1 is down from tile_4, and tile_2 is down from tile_5 Currently, robot robot1 is at tile_8 and holding color white and robot robot2 is at tile_1 and holding color black; tile_2, tile_7, tile_3, tile_5, and tile_4 are clear; tile_9 is painted black, tile_10 is painted white, tile_12 is painted white, tile_11 is painted black, and tile_6 is painted white.",
+    "question": "Is it possible to transition to a state where the action \"paint the tile tile_4 down from tile tile_7 with color white using the robot robot1\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": 2267095477358108077,
+    "group": "reachable_action_bool",
+    "context": "A set of robots use different colors to paint patterns in floor tiles. The robots can move around the floor tiles in four directions (up, down, left and right). Robots paint with one color at a time, but can change their spray guns to any available color. However, robots can only paint the tile that is in front (up) and behind (down) them, and once a tile has been painted no robot can stand on it. Robots need to paint a grid with black and white, where the cell color is alternated always. There are 2 robots and 12 tiles. The tiles locations are: tile_8 is to the right of tile_7, tile_3 is to the right of tile_2, tile_11 is to the right of tile_10, tile_9 is to the right of tile_8, tile_5 is to the right of tile_4, tile_2 is to the right of tile_1, tile_12 is to the right of tile_11, and tile_6 is to the right of tile_5. Further, tile_6 is down from tile_9, tile_7 is down from tile_10, tile_5 is down from tile_8, tile_8 is down from tile_11, tile_4 is down from tile_7, tile_9 is down from tile_12, tile_3 is down from tile_6, tile_1 is down from tile_4, and tile_2 is down from tile_5 Currently, robot robot1 is at tile_9 and holding color white and robot robot2 is at tile_7 and holding color white; tile_2, tile_3, tile_6, tile_1, tile_5, tile_4, tile_11, and tile_8 are clear; tile_10 is painted white and tile_12 is painted white.",
+    "question": "Is it possible to transition to a state where the action \"navigate robot robot2 from tile tile_4 to tile tile_5 to the right\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": 6817623796006297191,
+    "group": "reachable_action_bool",
+    "context": "A set of robots use different colors to paint patterns in floor tiles. The robots can move around the floor tiles in four directions (up, down, left and right). Robots paint with one color at a time, but can change their spray guns to any available color. However, robots can only paint the tile that is in front (up) and behind (down) them, and once a tile has been painted no robot can stand on it. Robots need to paint a grid with black and white, where the cell color is alternated always. There are 2 robots and 9 tiles. The tiles locations are: tile_8 is to the right of tile_7, tile_3 is to the right of tile_2, tile_9 is to the right of tile_8, tile_5 is to the right of tile_4, tile_2 is to the right of tile_1, and tile_6 is to the right of tile_5. Further, tile_6 is down from tile_9, tile_1 is down from tile_4, tile_5 is down from tile_8, tile_4 is down from tile_7, tile_3 is down from tile_6, and tile_2 is down from tile_5 Currently, robot robot2 is at tile_3 and holding color white and robot robot1 is at tile_1 and holding color white; tile_2, tile_6, tile_5, tile_4, and tile_9 are clear; tile_7 is painted black and tile_8 is painted white.",
+    "question": "Is it possible to transition to a state where the action \"unload truck robot2 from tile tile_6 to tile tile_5 to its left\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": 6734331229334849540,
+    "group": "reachable_action_bool",
+    "context": "This is a grippers domain, where there is a robot with two grippers. The robot can carry a ball in each. The goal is to take the balls from one room to another. There are 1 robot, 5 rooms, and 4 balls, numbered consecutively. Currently, the robot robot1 is at room1 and both grippers are free. Additionally, ball1 and ball2 are at room2, ball3 is at room3, ball4 is at room1.",
+    "question": "Is it possible to transition to a state where the action \"use robot robot1 with right1 gripper to place the object room3 in room room4\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": 1515868292243263346,
+    "group": "reachable_action_bool",
+    "context": "This is a grippers domain, where there is a robot with two grippers. The robot can carry a ball in each. The goal is to take the balls from one room to another. There are 1 robot, 3 rooms, and 4 balls, numbered consecutively. Currently, the robot robot1 is at room2, left gripper is free, and right gripper is carrying the ball ball4. Additionally, ball1 and ball2 are at room1, ball3 is at room3.",
+    "question": "Is it possible to transition to a state where the action \"pick up object ball2 with robot robot1 using right1 gripper from room room1\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": 9032896292019391631,
+    "group": "reachable_action_bool",
+    "context": "This is a grippers domain, where there is a robot with two grippers. The robot can carry a ball in each. The goal is to take the balls from one room to another. There are 1 robot, 7 rooms, and 4 balls, numbered consecutively. Currently, the robot robot1 is at room7, left gripper is carrying the ball ball3, and right gripper is carrying the ball ball4. Additionally, ball2 is at room2, ball1 is at room3.",
+    "question": "Is it possible to transition to a state where the action \"use robot robot1 with gripper ball3 to place the object left1 in room room6\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": -1862830603681948986,
+    "group": "reachable_action_bool",
+    "context": "This is a grippers domain, where there is a robot with two grippers. The robot can carry a ball in each. The goal is to take the balls from one room to another. There are 1 robot, 7 rooms, and 4 balls, numbered consecutively. Currently, the robot robot1 is at room1, left gripper is carrying the ball ball1, and right gripper is carrying the ball ball4. Additionally, ball3 is at room3, ball2 is at room2.",
+    "question": "Is it possible to transition to a state where the action \"transfer the robot robot1 from the room room3 to the room room5\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -8043624263676985927,
+    "group": "reachable_action_bool",
+    "context": "This is a grippers domain, where there is a robot with two grippers. The robot can carry a ball in each. The goal is to take the balls from one room to another. There are 1 robot, 3 rooms, and 4 balls, numbered consecutively. Currently, the robot robot1 is at room1, right gripper is free, and left gripper is carrying the ball ball2. Additionally, ball1 is at room1, ball4 and ball3 are at room3.",
+    "question": "Is it possible to transition to a state where the action \"grasp the object right1 from room room2 with the left1 gripper of robot robot1\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": 8053265170650408671,
+    "group": "reachable_action_bool",
+    "context": "This is a Rovers domain where rovers must navigate between waypoints gathering data and transmitting it back to a lander. Rovers cannot navigate to all waypoints and this makes particular routes impassable to some of the rovers. Data transmission is also constrained by the visibility of the lander from the waypoints. There are 2 rovers, 3 waypoints, 2 stores, 2 cameras, 3 objectives numbered consecutively. Further, there is 1 lander and 3 modes for the camera namely colour, high resolution, and low resolution.  Rover(s) rover0 is equipped for soil analysis. Rover(s) rover0 and rover1 are equipped for rock analysis. Rover(s) rover0 and rover1 are equipped for imaging. Rover rover1 has store store1. Rover rover0 has store store0. Rover rover0 has camera1 on board. Rover rover1 has camera0 on board. Camera camera0 can be calibrated on objective2. Camera camera1 can be calibrated on objective1. Camera camera1 supports high_res and low_res. Camera camera0 supports low_res. Rover rover0 can traverse from waypoint0 to waypoint2, waypoint2 to waypoint0, waypoint2 to waypoint1, waypoint1 to waypoint2. Rover rover1 can traverse from waypoint0 to waypoint2, waypoint2 to waypoint1, waypoint1 to waypoint2, waypoint2 to waypoint0. Waypoint(s) are visible from waypoint1: waypoint0 and waypoint2. Waypoint(s) are visible from waypoint2: waypoint0 and waypoint1. Waypoint(s) are visible from waypoint0: waypoint1 and waypoint2. Objective objective0 is visible from waypoint0 and waypoint1. Objective objective1 is visible from waypoint1. Objective objective2 is visible from waypoint1. Lander general is at waypoint waypoint1.  Currently, Rover rover0 is at waypoint2. Rover rover1 is at waypoint2. Rocks can be sampled at the following location(s): waypoint0 and waypoint2. Soil can be sampled at the following location(s): waypoint0 and waypoint2. Rovers rover0 and rover1 are available. Image objective1 was communicated in mode high_res. Rover rover0 has image objective1 in mode high_res. Rover rover0 has image objective1 in mode low_res. Rover rover0 has its camera camera1 calibrated. Store(s) store0 and store1 are empty. ",
+    "question": "Is it possible to transition to a state where the action \"drop the content from store store0 of the rover rover0\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -8199891120730497920,
+    "group": "reachable_action_bool",
+    "context": "This is a Rovers domain where rovers must navigate between waypoints gathering data and transmitting it back to a lander. Rovers cannot navigate to all waypoints and this makes particular routes impassable to some of the rovers. Data transmission is also constrained by the visibility of the lander from the waypoints. There are 2 rovers, 3 waypoints, 2 stores, 2 cameras, 3 objectives numbered consecutively. Further, there is 1 lander and 3 modes for the camera namely colour, high resolution, and low resolution.  Rover(s) rover0 is equipped for soil analysis. Rover(s) rover0 and rover1 are equipped for rock analysis. Rover(s) rover0 and rover1 are equipped for imaging. Rover rover1 has store store1. Rover rover0 has store store0. Rover rover0 has camera1 on board. Rover rover1 has camera0 on board. Camera camera0 can be calibrated on objective2. Camera camera1 can be calibrated on objective1. Camera camera1 supports high_res and low_res. Camera camera0 supports low_res. Rover rover0 can traverse from waypoint0 to waypoint2, waypoint2 to waypoint0, waypoint2 to waypoint1, waypoint1 to waypoint2. Rover rover1 can traverse from waypoint0 to waypoint2, waypoint2 to waypoint1, waypoint1 to waypoint2, waypoint2 to waypoint0. Waypoint(s) are visible from waypoint1: waypoint0 and waypoint2. Waypoint(s) are visible from waypoint2: waypoint0 and waypoint1. Waypoint(s) are visible from waypoint0: waypoint1 and waypoint2. Objective objective0 is visible from waypoint0 and waypoint1. Objective objective1 is visible from waypoint1. Objective objective2 is visible from waypoint1. Lander general is at waypoint waypoint1.  Currently, Rover rover1 is at waypoint1. Rover rover0 is at waypoint0. Rocks can be sampled at the following location(s): waypoint0 and waypoint2. Soil can be sampled at the following location(s): waypoint2. Rovers rover0 and rover1 are available. Image objective0 was communicated in mode low_res. Rover rover0 has soil analyzed in waypoint waypoint0. Rover rover0 has image objective1 in mode high_res. Rover rover0 has image objective0 in mode low_res. Rover rover0 has image objective1 in mode low_res. Store(s) store1 is empty. Store(s) store0 is full. ",
+    "question": "Is it possible to transition to a state where the action \"dig with rover rover1 to waypoint waypoint0 from waypoint waypoint2\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": -6424023894996853425,
+    "group": "reachable_action_bool",
+    "context": "This is a Rovers domain where rovers must navigate between waypoints gathering data and transmitting it back to a lander. Rovers cannot navigate to all waypoints and this makes particular routes impassable to some of the rovers. Data transmission is also constrained by the visibility of the lander from the waypoints. There are 2 rovers, 3 waypoints, 2 stores, 2 cameras, 3 objectives numbered consecutively. Further, there is 1 lander and 3 modes for the camera namely colour, high resolution, and low resolution.  Rover(s) rover0 is equipped for soil analysis. Rover(s) rover0 and rover1 are equipped for rock analysis. Rover(s) rover0 and rover1 are equipped for imaging. Rover rover1 has store store1. Rover rover0 has store store0. Rover rover0 has camera1 on board. Rover rover1 has camera0 on board. Camera camera0 can be calibrated on objective2. Camera camera1 can be calibrated on objective1. Camera camera1 supports high_res and low_res. Camera camera0 supports low_res. Rover rover0 can traverse from waypoint0 to waypoint2, waypoint2 to waypoint0, waypoint2 to waypoint1, waypoint1 to waypoint2. Rover rover1 can traverse from waypoint0 to waypoint2, waypoint2 to waypoint1, waypoint1 to waypoint2, waypoint2 to waypoint0. Waypoint(s) are visible from waypoint1: waypoint0 and waypoint2. Waypoint(s) are visible from waypoint2: waypoint0 and waypoint1. Waypoint(s) are visible from waypoint0: waypoint1 and waypoint2. Objective objective0 is visible from waypoint0 and waypoint1. Objective objective1 is visible from waypoint1. Objective objective2 is visible from waypoint1. Lander general is at waypoint waypoint1.  Currently, Rover rover0 is at waypoint2. Rover rover1 is at waypoint2. Rocks can be sampled at the following location(s): waypoint0. Soil can be sampled at the following location(s): waypoint0 and waypoint2. Rovers rover0 and rover1 are available. Image objective1 was communicated in mode high_res. Image objective0 was communicated in mode low_res. Rover rover1 has rock analyzed in waypoint waypoint2. Rover rover0 has image objective1 in mode high_res. Rover rover0 has image objective0 in mode low_res. Rover rover0 has image objective1 in mode low_res. Store(s) store0 is empty. Store(s) store1 is full. ",
+    "question": "Is it possible to transition to a state where the action \"navigate with rover rover1 to waypoint waypoint2 from waypoint waypoint0\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -5765841190656161768,
+    "group": "reachable_action_bool",
+    "context": "This is a Rovers domain where rovers must navigate between waypoints gathering data and transmitting it back to a lander. Rovers cannot navigate to all waypoints and this makes particular routes impassable to some of the rovers. Data transmission is also constrained by the visibility of the lander from the waypoints. There are 2 rovers, 3 waypoints, 2 stores, 2 cameras, 3 objectives numbered consecutively. Further, there is 1 lander and 3 modes for the camera namely colour, high resolution, and low resolution.  Rover(s) rover0 is equipped for soil analysis. Rover(s) rover0 and rover1 are equipped for rock analysis. Rover(s) rover0 and rover1 are equipped for imaging. Rover rover1 has store store1. Rover rover0 has store store0. Rover rover0 has camera1 on board. Rover rover1 has camera0 on board. Camera camera0 can be calibrated on objective2. Camera camera1 can be calibrated on objective1. Camera camera1 supports high_res and low_res. Camera camera0 supports low_res. Rover rover0 can traverse from waypoint0 to waypoint2, waypoint2 to waypoint0, waypoint2 to waypoint1, waypoint1 to waypoint2. Rover rover1 can traverse from waypoint0 to waypoint2, waypoint2 to waypoint1, waypoint1 to waypoint2, waypoint2 to waypoint0. Waypoint(s) are visible from waypoint1: waypoint0 and waypoint2. Waypoint(s) are visible from waypoint2: waypoint0 and waypoint1. Waypoint(s) are visible from waypoint0: waypoint1 and waypoint2. Objective objective0 is visible from waypoint0 and waypoint1. Objective objective1 is visible from waypoint1. Objective objective2 is visible from waypoint1. Lander general is at waypoint waypoint1.  Currently, Rover rover0 is at waypoint2. Rover rover1 is at waypoint2. Rocks can be sampled at the following location(s): waypoint0. Soil can be sampled at the following location(s): waypoint0 and waypoint2. Rovers rover0 and rover1 are available. Rover rover1 has rock analyzed in waypoint waypoint2. Rover rover0 has image objective1 in mode high_res. Rover rover0 has image objective0 in mode low_res. Rover rover0 has image objective1 in mode low_res. Store(s) store0 is empty. Store(s) store1 is full. ",
+    "question": "Is it possible to transition to a state where the action \"empty the store store0 from rover rover0\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -7733485757094612352,
+    "group": "reachable_action_bool",
+    "context": "This is a Rovers domain where rovers must navigate between waypoints gathering data and transmitting it back to a lander. Rovers cannot navigate to all waypoints and this makes particular routes impassable to some of the rovers. Data transmission is also constrained by the visibility of the lander from the waypoints. There are 2 rovers, 3 waypoints, 2 stores, 3 cameras, 2 objectives numbered consecutively. Further, there is 1 lander and 3 modes for the camera namely colour, high resolution, and low resolution.  Rover(s) rover0 and rover1 are equipped for soil analysis. Rover(s) rover1 is equipped for rock analysis. Rover(s) rover0 and rover1 are equipped for imaging. Rover rover1 has store store1. Rover rover0 has store store0. Rover rover1 has camera2 on board. Rover rover0 has camera1 and camera0 on board. Camera camera1 can be calibrated on objective0. Camera camera0 can be calibrated on objective1. Camera camera2 can be calibrated on objective0. Camera camera2 supports high_res and colour. Camera camera0 supports colour. Camera camera1 supports low_res. Rover rover0 can traverse from waypoint0 to waypoint2, waypoint1 to waypoint0, waypoint2 to waypoint0, waypoint0 to waypoint1. Rover rover1 can traverse from waypoint0 to waypoint2, waypoint2 to waypoint0, waypoint2 to waypoint1, waypoint1 to waypoint2. Waypoint(s) are visible from waypoint1: waypoint0 and waypoint2. Waypoint(s) are visible from waypoint2: waypoint0 and waypoint1. Waypoint(s) are visible from waypoint0: waypoint1 and waypoint2. Objective objective0 is visible from waypoint0 and waypoint1. Objective objective1 is visible from waypoint2. Lander general is at waypoint waypoint1.  Currently, Rover rover1 is at waypoint2. Rover rover0 is at waypoint0. Rovers rover0 and rover1 are available. Image objective1 was communicated in mode colour. Image objective0 was communicated in mode low_res. Rover rover1 has soil analyzed in waypoint waypoint1. Rover rover1 has rock analyzed in waypoint waypoint1. Rover rover0 has image objective0 in mode low_res. Rover rover1 has image objective1 in mode colour. Rover rover0 has its camera camera1 calibrated. Store(s) store0 is empty. Store(s) store1 is full. ",
+    "question": "Is it possible to transition to a state where the action \"communicate image data of objective objective1 in mode high_res from rover rover0 at waypoint waypoint0 to lander general at waypoint waypoint2\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": -8399703894370865909,
+    "group": "reachable_action_bool",
+    "context": "This is a visitall domain where a robot in a grid must visit all the cells or places in the grid. There are some unavailable places in the grid. The grid size is 4x4, and the location cell names are of the form loc-xi-yj (e.g., loc-x0-y2 or loc-x1-y1). The grid cells are connected to their available neighbors. The unavailable cells are loc-x0-y3, loc-x0-y0, and loc-x3-y3. Currently, the robot is in place loc-x1-y2.The following places have been visited: loc-x1-y2, loc-x3-y2, loc-x1-y1, loc-x2-y2, loc-x0-y2, loc-x2-y0, loc-x1-y0, loc-x3-y0, loc-x3-y1, loc-x0-y1, and loc-x2-y1.",
+    "question": "Is it possible to transition to a state where the action \"go to loc-x0-y1 from loc-x0-y2\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -5086241473530925403,
+    "group": "reachable_action_bool",
+    "context": "This is a visitall domain where a robot in a grid must visit all the cells or places in the grid. There are some unavailable places in the grid. The grid size is 4x4, and the location cell names are of the form loc-xi-yj (e.g., loc-x0-y2 or loc-x1-y1). The grid cells are connected to their available neighbors. The only unavailable cell is loc-x3-y1. Currently, the robot is in place loc-x0-y1.The following places have been visited: loc-x0-y0, loc-x1-y2, loc-x1-y3, loc-x3-y2, loc-x1-y1, loc-x0-y3, loc-x3-y3, loc-x2-y2, loc-x0-y2, loc-x2-y0, loc-x1-y0, loc-x3-y0, loc-x0-y1, loc-x2-y3, and loc-x2-y1.",
+    "question": "Is it possible to transition to a state where the action \"push box to place loc-x0-y2 from place loc-x0-y1\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": 509803783501305044,
+    "group": "reachable_action_bool",
+    "context": "This is a visitall domain where a robot in a grid must visit all the cells or places in the grid. There are some unavailable places in the grid. The grid size is 4x4, and the location cell names are of the form loc-xi-yj (e.g., loc-x0-y2 or loc-x1-y1). The grid cells are connected to their available neighbors. The unavailable cells are loc-x0-y0 and loc-x0-y3. Currently, the robot is in place loc-x2-y3.The following places have been visited: loc-x1-y1, loc-x3-y3, loc-x2-y2, loc-x2-y0, loc-x1-y0, loc-x3-y0, loc-x3-y1, loc-x3-y2, loc-x2-y3, and loc-x2-y1.",
+    "question": "Is it possible to transition to a state where the action \"transition from the current position loc-x3-y1 to the next position loc-x3-y0\" can be applied?",
+    "answer": "yes"
+  },
+  {
+    "id": -5822087567347881136,
+    "group": "reachable_action_bool",
+    "context": "This is a visitall domain where a robot in a grid must visit all the cells or places in the grid. There are some unavailable places in the grid. The grid size is 4x4, and the location cell names are of the form loc-xi-yj (e.g., loc-x0-y2 or loc-x1-y1). The grid cells are connected to their available neighbors. The unavailable cells are loc-x0-y0 and loc-x0-y3. Currently, the robot is in place loc-x1-y1.The following places have been visited: loc-x1-y2, loc-x1-y3, loc-x1-y1, loc-x3-y3, loc-x2-y2, loc-x0-y2, loc-x3-y2, loc-x0-y1, and loc-x2-y3.",
+    "question": "Is it possible to transition to a state where the action \"check that position loc-x1-y2 is connected to position loc-x0-y2\" can be applied?",
+    "answer": "no"
+  },
+  {
+    "id": -6314723815262668782,
+    "group": "reachable_action_bool",
+    "context": "This is a visitall domain where a robot in a grid must visit all the cells or places in the grid. There are some unavailable places in the grid. The grid size is 4x4, and the location cell names are of the form loc-xi-yj (e.g., loc-x0-y2 or loc-x1-y1). The grid cells are connected to their available neighbors. The only unavailable cell is loc-x3-y1. Currently, the robot is in place loc-x2-y0.The following places have been visited: loc-x1-y3, loc-x0-y3, loc-x3-y3, loc-x2-y2, loc-x2-y0, loc-x3-y2, loc-x2-y3, and loc-x2-y1.",
+    "question": "Is it possible to transition to a state where the action \"Please move to loc-x2-y0 position from loc-x3-y0 position\" can be applied?",
+    "answer": "yes"
+  }
+]

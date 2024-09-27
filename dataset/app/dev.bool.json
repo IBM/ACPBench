@@ -1,0 +1,282 @@
+[
+  {
+    "id": -8342636639526456067,
+    "group": "applicable_actions_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 20 cars, numbered consecutively. Currently, the ferry is at l1 location and it is empty. The cars are at locations as follows: c7, c11, c2, c16, c14, c19, c5, c4, c12, c17, and c1 are at l1; c13, c8, c6, c18, c0, c3, c9, c10, and c15 are at l0.",
+    "question": "Is the following action applicable in this state: travel by sea from location l1 to location l0?",
+    "answer": "yes"
+  },
+  {
+    "id": -1856811122860326316,
+    "group": "applicable_actions_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 10 cars, numbered consecutively. Currently, the ferry is at l1, with the car c0 on board. The cars are at locations as follows: c6, c3, c9, c1, c8, and c5 are at l0; c4, c7, and c2 are at l1.",
+    "question": "Is the following action applicable in this state: travel by sea from location l1 to location l0?",
+    "answer": "yes"
+  },
+  {
+    "id": 9079664514120397880,
+    "group": "applicable_actions_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 20 cars, numbered consecutively. Currently, the ferry is at l1 location and it is empty. The cars are at locations as follows: c7, c11, c16, c14, c19, c5, c4, and c12 are at l1; c13, c8, c17, c6, c18, c0, c3, c9, c1, c2, c10, and c15 are at l0.",
+    "question": "Is the following action applicable in this state: travel by sea from location l1 to location l0?",
+    "answer": "yes"
+  },
+  {
+    "id": -8570089940865135151,
+    "group": "applicable_actions_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 20 cars, numbered consecutively. Currently, the ferry is at l1 location and it is empty. The cars are at locations as follows: c7, c11, c2, c16, c14, c18, c19, c5, c6, c4, c12, and c1 are at l1; c13, c8, c17, c0, c3, c9, c10, and c15 are at l0.",
+    "question": "Is the following action applicable in this state: travel by sea from location l1 to location l0?",
+    "answer": "yes"
+  },
+  {
+    "id": -7191222818430500134,
+    "group": "applicable_actions_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 2 cars, numbered consecutively. Currently, the ferry is at l1 location and it is empty. The cars are at locations as follows: c1 and c0 are at l0.",
+    "question": "Is the following action applicable in this state: debark the car c1 from the ferry to location l0?",
+    "answer": "no"
+  },
+  {
+    "id": -7316728961492289778,
+    "group": "applicable_actions_bool",
+    "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 3 trucks and 1 airplane, as well as 4 packages. There are 9 locations across 3 cities. The locations are in cities as follows: l1-1, l1-0, and l1-2 are in c1; l2-2, l2-1, and l2-0 are in c2; l0-1, l0-2, and l0-0 are in c0. Currently, a0 is at l2-0, p0, p3, and t2 are at l2-1, p2 is at l0-1, t1 is at l1-2, t0 is at l0-0, p1 is in t1.",
+    "question": "Is the following action applicable in this state: remove the object p3 from the truck t2 and place it on the location l2-2?",
+    "answer": "no"
+  },
+  {
+    "id": -8897231179559004547,
+    "group": "applicable_actions_bool",
+    "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 3 trucks and 1 airplane, as well as 4 packages. There are 9 locations across 3 cities. The locations are in cities as follows: l1-1, l1-0, and l1-2 are in c1; l2-2, l2-1, and l2-0 are in c2; l0-1, l0-2, and l0-0 are in c0. Currently, a0 and p1 are at l2-0, p0 and t2 are at l2-1, t1 is at l1-0, t0 is at l0-1, p2 is in t0, p3 is in t2.",
+    "question": "Is the following action applicable in this state: unload the object p1 from the airplane a0 at location l1-0?",
+    "answer": "no"
+  },
+  {
+    "id": 3874344807256633001,
+    "group": "applicable_actions_bool",
+    "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 4 locations across 2 cities. The locations are in cities as follows: l1-0 and l1-1 are in c1; l0-0 and l0-1 are in c0. Currently, a0 and t0 are at l0-0, p2 and t1 are at l1-0, p0 is in a0, p1 is in t1, p3 is in t0.",
+    "question": "Is the following action applicable in this state: drive truck t1 from location l1-0 in city c1 to location l1-1 in the same city?",
+    "answer": "yes"
+  },
+  {
+    "id": -4548104580515300385,
+    "group": "applicable_actions_bool",
+    "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 2 trucks and 1 airplane, as well as 4 packages. There are 6 locations across 2 cities. The locations are in cities as follows: l1-1, l1-0, and l1-2 are in c1; l0-1, l0-2, and l0-0 are in c0. Currently, a0 is at l0-0, p0 and t1 are at l1-0, t0 is at l0-2, p1 is at l1-1, p2 and p3 are in t1.",
+    "question": "Is the following action applicable in this state: fly airplane a0 from airport l0-0 to airport l0-0?",
+    "answer": "yes"
+  },
+  {
+    "id": -3116147047898948319,
+    "group": "applicable_actions_bool",
+    "context": "There are several cities, each containing several locations, some of which are airports. There are also trucks, which can drive within a single city, and airplanes, which can fly between airports. The goal is to get some packages from various locations to various new locations. There are 3 trucks and 1 airplane, as well as 4 packages. There are 9 locations across 3 cities. The locations are in cities as follows: l1-1, l1-0, and l1-2 are in c1; l2-2, l2-1, and l2-0 are in c2; l0-1, l0-2, and l0-0 are in c0. Currently, p1 and t1 are at l1-0, t2 is at l2-0, a0 is at l0-0, p2 and t0 are at l0-1, p3 is in a0, p0 is in t2.",
+    "question": "Is the following action applicable in this state: load object p3 into airplane a0 at location l2-0?",
+    "answer": "no"
+  },
+  {
+    "id": -124691080565626434,
+    "group": "applicable_actions_bool",
+    "context": "This is a blocksworld domain where blocks can be placed on top of each other or on the table. There is one robotic arm that can move the block. There are 5 blocks. Currently, the robotic arm is empty. The following block(s) are on the table: block_3, block_1, and block_2. The following block(s) are stacked on top of another block: block_5 is on block_4 and block_4 is on block_2.",
+    "question": "Is the following action applicable in this state: pick up the object block_5 from the table?",
+    "answer": "no"
+  },
+  {
+    "id": 1480543951151185950,
+    "group": "applicable_actions_bool",
+    "context": "This is a blocksworld domain where blocks can be placed on top of each other or on the table. There is one robotic arm that can move the block. There are 5 blocks. Currently, the robotic arm is holding block_3. The following block(s) are on the table: block_5 and block_2. The following block(s) are stacked on top of another block: block_4 is on block_5 and block_1 is on block_4.",
+    "question": "Is the following action applicable in this state: place the object block_3 on top of the object block_1?",
+    "answer": "yes"
+  },
+  {
+    "id": -2706240624293565667,
+    "group": "applicable_actions_bool",
+    "context": "This is a blocksworld domain where blocks can be placed on top of each other or on the table. There is one robotic arm that can move the block. There are 5 blocks. Currently, the robotic arm is empty. The following block(s) are on the table: block_5 and block_1. The following block(s) are stacked on top of another block: block_4 is on block_5, block_3 is on block_1, and block_2 is on block_4.",
+    "question": "Is the following action applicable in this state: put down the object block_1?",
+    "answer": "no"
+  },
+  {
+    "id": 2878525286685457971,
+    "group": "applicable_actions_bool",
+    "context": "This is a blocksworld domain where blocks can be placed on top of each other or on the table. There is one robotic arm that can move the block. There are 5 blocks. Currently, the robotic arm is empty. The following block(s) are on the table: block_3, block_1, and block_2. The following block(s) are stacked on top of another block: block_5 is on block_3 and block_4 is on block_2.",
+    "question": "Is the following action applicable in this state: remove the object block_5 from on top of the object block_3?",
+    "answer": "yes"
+  },
+  {
+    "id": 942696138590373773,
+    "group": "applicable_actions_bool",
+    "context": "This is a blocksworld domain where blocks can be placed on top of each other or on the table. There is one robotic arm that can move the block. There are 5 blocks. Currently, the robotic arm is empty. The following block(s) are on the table: block_5 and block_3. The following block(s) are stacked on top of another block: block_4 is on block_2, block_2 is on block_1, and block_1 is on block_3.",
+    "question": "Is the following action applicable in this state: remove block_5 from table?",
+    "answer": "yes"
+  },
+  {
+    "id": 199307750222506093,
+    "group": "applicable_actions_bool",
+    "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-1 is of shape shape0, Key key0-0 is of shape shape0.  Currently, the robot is at position f4-4f and is holding key0-1. All the positions are open except the following: f3-4f has shape0 shaped lock. Key key0-0 is at position f1-0f.",
+    "question": "Is the following action applicable in this state: use the key key0-0 of shape shape0 to unlock the place f3-4f from the current position f2-4f?",
+    "answer": "no"
+  },
+  {
+    "id": 2948875743545569956,
+    "group": "applicable_actions_bool",
+    "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-1 is of shape shape0, Key key0-0 is of shape shape0.  Currently, the robot is at position f1-3f and its arm is empty. All the positions are open except the following: f4-2f has shape0 shaped lock, f2-0f has shape0 shaped lock. Key key0-0 is at position f2-2f. Key key0-1 is at position f1-3f.",
+    "question": "Is the following action applicable in this state: put the key key0-0 at the current position place f3-1f?",
+    "answer": "no"
+  },
+  {
+    "id": 7644901319983701508,
+    "group": "applicable_actions_bool",
+    "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-1 is of shape shape0, Key key0-0 is of shape shape0.  Currently, the robot is at position f3-1f and its arm is empty. All the positions are open except the following: f4-2f has shape0 shaped lock. Key key0-0 is at position f3-0f. Key key0-1 is at position f1-3f.",
+    "question": "Is the following action applicable in this state: transition from the current position f3-1f to the next position f3-2f?",
+    "answer": "yes"
+  },
+  {
+    "id": 936300457942476490,
+    "group": "applicable_actions_bool",
+    "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-1 is of shape shape0, Key key0-0 is of shape shape0.  Currently, the robot is at position f2-1f and its arm is empty. All the positions are open except the following: f4-2f has shape0 shaped lock. Key key0-0 is at position f1-1f. Key key0-1 is at position f1-3f.",
+    "question": "Is the following action applicable in this state: retrieve the key key0-1 from its current position f2-4f?",
+    "answer": "no"
+  },
+  {
+    "id": 1085389054865050345,
+    "group": "applicable_actions_bool",
+    "context": "A robot is in a grid and can only move to places that are connected to its current position. The grid size is 5x5, and the locations are of the form fi-jf (e.g., f3-2f or f0-1f). The grid cells are connected to their neighbors (e.g., f1-2f is connected to the four neighbors f0-2f, f2-2f, f1-1f, and f1-3f). Some positions on the grid are locked and can be opened with a key of a matching shape. The robot has an arm that can pick up a key when the key is in same location as the robot and the arm is empty.  There are 2 keys in 1 different shapes: Key key0-1 is of shape shape0, Key key0-0 is of shape shape0.  Currently, the robot is at position f1-0f and is holding key0-1. All the positions are open except the following: f3-4f has shape0 shaped lock, f2-1f has shape0 shaped lock. Key key0-0 is at position f1-0f.",
+    "question": "Is the following action applicable in this state: place the key key0-0 at the current position place f3-2f?",
+    "answer": "no"
+  },
+  {
+    "id": 8457401389032265291,
+    "group": "applicable_actions_bool",
+    "context": "A set of robots use different colors to paint patterns in floor tiles. The robots can move around the floor tiles in four directions (up, down, left and right). Robots paint with one color at a time, but can change their spray guns to any available color. However, robots can only paint the tile that is in front (up) and behind (down) them, and once a tile has been painted no robot can stand on it. Robots need to paint a grid with black and white, where the cell color is alternated always. There are 9 tiles and 2 robots. The tiles locations are: tile_8 is to the right of tile_7, tile_6 is to the right of tile_5, tile_3 is to the right of tile_2, tile_2 is to the right of tile_1, tile_9 is to the right of tile_8, and tile_5 is to the right of tile_4. Further, tile_4 is down from tile_7, tile_5 is down from tile_8, tile_2 is down from tile_5, tile_3 is down from tile_6, tile_6 is down from tile_9, and tile_1 is down from tile_4 Currently, robot robot1 is at tile_5 and holding color white and robot robot2 is at tile_1 and holding color white; tile_2, tile_6, tile_8, and tile_3 are clear; tile_9 is painted black, tile_4 is painted white, and tile_7 is painted black.",
+    "question": "Is the following action applicable in this state: apply color black to tile tile_8 above tile tile_5 using robot robot1?",
+    "answer": "no"
+  },
+  {
+    "id": -1880845767003734025,
+    "group": "applicable_actions_bool",
+    "context": "A set of robots use different colors to paint patterns in floor tiles. The robots can move around the floor tiles in four directions (up, down, left and right). Robots paint with one color at a time, but can change their spray guns to any available color. However, robots can only paint the tile that is in front (up) and behind (down) them, and once a tile has been painted no robot can stand on it. Robots need to paint a grid with black and white, where the cell color is alternated always. There are 12 tiles and 2 robots. The tiles locations are: tile_9 is to the right of tile_8, tile_8 is to the right of tile_7, tile_6 is to the right of tile_5, tile_3 is to the right of tile_2, tile_2 is to the right of tile_1, tile_12 is to the right of tile_11, tile_11 is to the right of tile_10, and tile_5 is to the right of tile_4. Further, tile_8 is down from tile_11, tile_4 is down from tile_7, tile_5 is down from tile_8, tile_7 is down from tile_10, tile_9 is down from tile_12, tile_2 is down from tile_5, tile_3 is down from tile_6, tile_6 is down from tile_9, and tile_1 is down from tile_4 Currently, robot robot2 is at tile_8 and holding color black and robot robot1 is at tile_3 and holding color white; tile_11, tile_5, tile_9, tile_2, tile_4, tile_6, tile_1, and tile_7 are clear; tile_10 is painted white and tile_12 is painted white.",
+    "question": "Is the following action applicable in this state: move the robot robot2 from the tile tile_11 to the tile tile_12 which is to the right of the tile tile_11?",
+    "answer": "no"
+  },
+  {
+    "id": 1552586316397612823,
+    "group": "applicable_actions_bool",
+    "context": "A set of robots use different colors to paint patterns in floor tiles. The robots can move around the floor tiles in four directions (up, down, left and right). Robots paint with one color at a time, but can change their spray guns to any available color. However, robots can only paint the tile that is in front (up) and behind (down) them, and once a tile has been painted no robot can stand on it. Robots need to paint a grid with black and white, where the cell color is alternated always. There are 9 tiles and 2 robots. The tiles locations are: tile_8 is to the right of tile_7, tile_6 is to the right of tile_5, tile_3 is to the right of tile_2, tile_2 is to the right of tile_1, tile_9 is to the right of tile_8, and tile_5 is to the right of tile_4. Further, tile_4 is down from tile_7, tile_5 is down from tile_8, tile_2 is down from tile_5, tile_3 is down from tile_6, tile_6 is down from tile_9, and tile_1 is down from tile_4 Currently, robot robot1 is at tile_2 and holding color white and robot robot2 is at tile_3 and holding color white; tile_5, tile_1, and tile_8 are clear; tile_6 is painted white, tile_9 is painted black, tile_4 is painted white, and tile_7 is painted black.",
+    "question": "Is the following action applicable in this state: move the robot robot1 from tile tile_1 to the right tile tile_2?",
+    "answer": "no"
+  },
+  {
+    "id": -6623544292513332864,
+    "group": "applicable_actions_bool",
+    "context": "A set of robots use different colors to paint patterns in floor tiles. The robots can move around the floor tiles in four directions (up, down, left and right). Robots paint with one color at a time, but can change their spray guns to any available color. However, robots can only paint the tile that is in front (up) and behind (down) them, and once a tile has been painted no robot can stand on it. Robots need to paint a grid with black and white, where the cell color is alternated always. There are 16 tiles and 2 robots. The tiles locations are: tile_4 is to the right of tile_3, tile_8 is to the right of tile_7, tile_6 is to the right of tile_5, tile_10 is to the right of tile_9, tile_7 is to the right of tile_6, tile_14 is to the right of tile_13, tile_15 is to the right of tile_14, tile_3 is to the right of tile_2, tile_16 is to the right of tile_15, tile_2 is to the right of tile_1, tile_12 is to the right of tile_11, and tile_11 is to the right of tile_10. Further, tile_11 is down from tile_15, tile_8 is down from tile_12, tile_6 is down from tile_10, tile_4 is down from tile_8, tile_3 is down from tile_7, tile_2 is down from tile_6, tile_9 is down from tile_13, tile_12 is down from tile_16, tile_10 is down from tile_14, tile_5 is down from tile_9, tile_1 is down from tile_5, and tile_7 is down from tile_11 Currently, robot robot1 is at tile_2 and holding color black and robot robot2 is at tile_7 and holding color black; tile_11, tile_5, tile_4, tile_6, tile_1, and tile_3 are clear; tile_12 is painted white, tile_13 is painted white, tile_16 is painted black, tile_8 is painted black, tile_9 is painted black, tile_10 is painted white, tile_15 is painted white, and tile_14 is painted black.",
+    "question": "Is the following action applicable in this state: move the robot robot1 from the tile tile_2 to the tile tile_3 which is to the right of the tile tile_2?",
+    "answer": "yes"
+  },
+  {
+    "id": 715987590410778062,
+    "group": "applicable_actions_bool",
+    "context": "A set of robots use different colors to paint patterns in floor tiles. The robots can move around the floor tiles in four directions (up, down, left and right). Robots paint with one color at a time, but can change their spray guns to any available color. However, robots can only paint the tile that is in front (up) and behind (down) them, and once a tile has been painted no robot can stand on it. Robots need to paint a grid with black and white, where the cell color is alternated always. There are 9 tiles and 2 robots. The tiles locations are: tile_8 is to the right of tile_7, tile_6 is to the right of tile_5, tile_3 is to the right of tile_2, tile_2 is to the right of tile_1, tile_9 is to the right of tile_8, and tile_5 is to the right of tile_4. Further, tile_4 is down from tile_7, tile_5 is down from tile_8, tile_2 is down from tile_5, tile_3 is down from tile_6, tile_6 is down from tile_9, and tile_1 is down from tile_4 Currently, robot robot1 is at tile_2 and holding color black and robot robot2 is at tile_3 and holding color black; tile_5, tile_4, tile_6, tile_1, and tile_7 are clear; tile_9 is painted black and tile_8 is painted white.",
+    "question": "Is the following action applicable in this state: move the robot robot1 from tile tile_3 to the left tile tile_2?",
+    "answer": "no"
+  },
+  {
+    "id": 5873112862528398667,
+    "group": "applicable_actions_bool",
+    "context": "This is a grippers domain, where there is a robot with two grippers. The robot can carry a ball in each. The goal is to take the balls from one room to another. There are 1 robot, 5 rooms, and 4 balls, numbered consecutively. Currently, the robot robot1 is at room1 and both grippers are free. Additionally, ball3 is at room3, ball2 is at room2, ball1 and ball4 are at room1.",
+    "question": "Is the following action applicable in this state: transfer the robot robot1 from the room room3 to the room room2?",
+    "answer": "no"
+  },
+  {
+    "id": 4420329847664892166,
+    "group": "applicable_actions_bool",
+    "context": "This is a grippers domain, where there is a robot with two grippers. The robot can carry a ball in each. The goal is to take the balls from one room to another. There are 1 robot, 7 rooms, and 4 balls, numbered consecutively. Currently, the robot robot1 is at room3 and both grippers are free. Additionally, ball2 and ball1 are at room3, ball4 is at room6, ball3 is at room5.",
+    "question": "Is the following action applicable in this state: transfer the robot robot1 from the room room3 to the room room1?",
+    "answer": "yes"
+  },
+  {
+    "id": -3709153981023761215,
+    "group": "applicable_actions_bool",
+    "context": "This is a grippers domain, where there is a robot with two grippers. The robot can carry a ball in each. The goal is to take the balls from one room to another. There are 1 robot, 3 rooms, and 4 balls, numbered consecutively. Currently, the robot robot1 is at room2, left gripper is carrying the ball ball4, and right gripper is carrying the ball ball1. Additionally, ball3 is at room3, ball2 is at room2.",
+    "question": "Is the following action applicable in this state: place the object ball1 in the room room2 using the robot robot1 with right1 gripper?",
+    "answer": "yes"
+  },
+  {
+    "id": 1877863982599106301,
+    "group": "applicable_actions_bool",
+    "context": "This is a grippers domain, where there is a robot with two grippers. The robot can carry a ball in each. The goal is to take the balls from one room to another. There are 1 robot, 3 rooms, and 4 balls, numbered consecutively. Currently, the robot robot1 is at room3 and both grippers are free. Additionally, ball3 is at room3, ball2 and ball1 are at room2, ball4 is at room1.",
+    "question": "Is the following action applicable in this state: drop object ball4 in room room1 using left1 gripper of robot robot1?",
+    "answer": "no"
+  },
+  {
+    "id": 8709093593162738396,
+    "group": "applicable_actions_bool",
+    "context": "This is a grippers domain, where there is a robot with two grippers. The robot can carry a ball in each. The goal is to take the balls from one room to another. There are 1 robot, 5 rooms, and 4 balls, numbered consecutively. Currently, the robot robot1 is at room3 and both grippers are free. Additionally, ball3 is at room3, ball4 is at room4, ball2 is at room2, ball1 is at room1.",
+    "question": "Is the following action applicable in this state: move robot robot1 from room room3 to room room3?",
+    "answer": "yes"
+  },
+  {
+    "id": 6493467860486563987,
+    "group": "applicable_actions_bool",
+    "context": "This is a Rovers domain where rovers must navigate between waypoints gathering data and transmitting it back to a lander. Rovers cannot navigate to all waypoints and this makes particular routes impassable to some of the rovers. Data transmission is also constrained by the visibility of the lander from the waypoints. There are 2 rovers, 3 waypoints, 2 stores, 3 cameras, 2 objectives numbered consecutively. Further, there is 1 lander and 3 modes for the camera namely colour, high resolution, and low resolution.  Rover(s) rover0 and rover1 are equipped for soil analysis. Rover(s) rover0 is equipped for rock analysis. Rover(s) rover0 and rover1 are equipped for imaging. Rover rover1 has store store1. Rover rover0 has store store0. Rover rover1 has camera1 and camera0 on board. Rover rover0 has camera2 on board. Camera camera0 can be calibrated on objective0. Camera camera1 can be calibrated on objective0. Camera camera2 can be calibrated on objective1. Camera camera2 supports high_res. Camera camera0 supports low_res and colour. Camera camera1 supports high_res. Rover rover1 can traverse from waypoint1 to waypoint0, waypoint2 to waypoint1, waypoint0 to waypoint1, waypoint1 to waypoint2. Rover rover0 can traverse from waypoint2 to waypoint1, waypoint1 to waypoint0, waypoint0 to waypoint1, waypoint1 to waypoint2. Waypoint(s) are visible from waypoint0: waypoint2 and waypoint1. Waypoint(s) are visible from waypoint1: waypoint2 and waypoint0. Waypoint(s) are visible from waypoint2: waypoint1 and waypoint0. Objective objective1 is visible from waypoint1 and waypoint0. Objective objective0 is visible from waypoint2. Lander general is at waypoint waypoint1.  Currently, Rover rover0 is at waypoint2. Rover rover1 is at waypoint1. Rocks can be sampled at the following location(s): waypoint0. Soil can be sampled at the following location(s): waypoint0 and waypoint1. Rovers rover1 and rover0 are available. Image objective0 was communicated in mode high_res. Image objective1 was communicated in mode high_res. Rover rover0 has rock analyzed in waypoint waypoint2. Rover rover0 has image objective0 in mode high_res. Rover rover0 has image objective1 in mode high_res. Store(s) store1 is empty. Store(s) store0 is full. ",
+    "question": "Is the following action applicable in this state: communicate the image data of target objective1 in mode high_res from rover rover0 at waypoint waypoint2 to lander general at waypoint waypoint1?",
+    "answer": "yes"
+  },
+  {
+    "id": 1035141249089661846,
+    "group": "applicable_actions_bool",
+    "context": "This is a Rovers domain where rovers must navigate between waypoints gathering data and transmitting it back to a lander. Rovers cannot navigate to all waypoints and this makes particular routes impassable to some of the rovers. Data transmission is also constrained by the visibility of the lander from the waypoints. There are 2 rovers, 3 waypoints, 2 stores, 3 cameras, 3 objectives numbered consecutively. Further, there is 1 lander and 3 modes for the camera namely colour, high resolution, and low resolution.  Rover(s) rover0 and rover1 are equipped for soil analysis. Rover(s) rover0 is equipped for rock analysis. Rover(s) rover0 and rover1 are equipped for imaging. Rover rover1 has store store1. Rover rover0 has store store0. Rover rover1 has camera1 and camera0 on board. Rover rover0 has camera2 on board. Camera camera0 can be calibrated on objective0. Camera camera2 can be calibrated on objective2. Camera camera1 can be calibrated on objective0. Camera camera2 supports high_res. Camera camera0 supports low_res and colour. Camera camera1 supports high_res. Rover rover1 can traverse from waypoint1 to waypoint0, waypoint2 to waypoint1, waypoint0 to waypoint1, waypoint1 to waypoint2. Rover rover0 can traverse from waypoint2 to waypoint1, waypoint1 to waypoint0, waypoint0 to waypoint1, waypoint1 to waypoint2. Waypoint(s) are visible from waypoint0: waypoint2 and waypoint1. Waypoint(s) are visible from waypoint1: waypoint2 and waypoint0. Waypoint(s) are visible from waypoint2: waypoint1 and waypoint0. Objective objective2 is visible from waypoint0. Objective objective1 is visible from waypoint1 and waypoint0. Objective objective0 is visible from waypoint2. Lander general is at waypoint waypoint1.  Currently, Rover rover0 is at waypoint1. Rover rover1 is at waypoint0. Rocks can be sampled at the following location(s): waypoint0. Soil can be sampled at the following location(s): waypoint0. Rovers rover1 and rover0 are available. Image objective1 was communicated in mode low_res. Image objective1 was communicated in mode high_res. Rover rover1 has image objective1 in mode high_res. Rover rover1 has image objective1 in mode low_res. Store(s) store1 and store0 are empty. ",
+    "question": "Is the following action applicable in this state: communicate the image data of objective objective1 in mode high_res from rover rover1 at waypoint waypoint0 to lander general at waypoint waypoint1?",
+    "answer": "yes"
+  },
+  {
+    "id": -8750587955111194915,
+    "group": "applicable_actions_bool",
+    "context": "This is a Rovers domain where rovers must navigate between waypoints gathering data and transmitting it back to a lander. Rovers cannot navigate to all waypoints and this makes particular routes impassable to some of the rovers. Data transmission is also constrained by the visibility of the lander from the waypoints. There are 2 rovers, 3 waypoints, 2 stores, 3 cameras, 3 objectives numbered consecutively. Further, there is 1 lander and 3 modes for the camera namely colour, high resolution, and low resolution.  Rover(s) rover0 and rover1 are equipped for soil analysis. Rover(s) rover0 is equipped for rock analysis. Rover(s) rover0 and rover1 are equipped for imaging. Rover rover1 has store store1. Rover rover0 has store store0. Rover rover1 has camera1 and camera0 on board. Rover rover0 has camera2 on board. Camera camera0 can be calibrated on objective0. Camera camera2 can be calibrated on objective2. Camera camera1 can be calibrated on objective0. Camera camera2 supports high_res. Camera camera0 supports low_res and colour. Camera camera1 supports high_res. Rover rover1 can traverse from waypoint1 to waypoint0, waypoint2 to waypoint1, waypoint0 to waypoint1, waypoint1 to waypoint2. Rover rover0 can traverse from waypoint2 to waypoint1, waypoint1 to waypoint0, waypoint0 to waypoint1, waypoint1 to waypoint2. Waypoint(s) are visible from waypoint0: waypoint2 and waypoint1. Waypoint(s) are visible from waypoint1: waypoint2 and waypoint0. Waypoint(s) are visible from waypoint2: waypoint1 and waypoint0. Objective objective2 is visible from waypoint0. Objective objective1 is visible from waypoint1 and waypoint0. Objective objective0 is visible from waypoint2. Lander general is at waypoint waypoint1.  Currently, Rover rover1 is at waypoint0. Rover rover0 is at waypoint0. Rovers rover1 and rover0 are available. Rock data was communicated from waypoint waypoint0; Image objective1 was communicated in mode low_res. Image objective1 was communicated in mode high_res. Rover rover0 has soil analyzed in waypoint waypoint0. Rover rover0 has rock analyzed in waypoint waypoint0. Rover rover1 has image objective1 in mode high_res. Rover rover1 has image objective1 in mode low_res. Store(s) store0 and store1 are empty. ",
+    "question": "Is the following action applicable in this state: transmit the rock data from the rover rover0 at waypoint waypoint0 to the lander general at waypoint waypoint1 using waypoint waypoint0 as a relay?",
+    "answer": "yes"
+  },
+  {
+    "id": -1664489182295143269,
+    "group": "applicable_actions_bool",
+    "context": "This is a Rovers domain where rovers must navigate between waypoints gathering data and transmitting it back to a lander. Rovers cannot navigate to all waypoints and this makes particular routes impassable to some of the rovers. Data transmission is also constrained by the visibility of the lander from the waypoints. There are 2 rovers, 3 waypoints, 2 stores, 3 cameras, 2 objectives numbered consecutively. Further, there is 1 lander and 3 modes for the camera namely colour, high resolution, and low resolution.  Rover(s) rover0 and rover1 are equipped for soil analysis. Rover(s) rover1 is equipped for rock analysis. Rover(s) rover0 and rover1 are equipped for imaging. Rover rover1 has store store1. Rover rover0 has store store0. Rover rover0 has camera0 and camera1 on board. Rover rover1 has camera2 on board. Camera camera1 can be calibrated on objective0. Camera camera0 can be calibrated on objective1. Camera camera2 can be calibrated on objective0. Camera camera2 supports high_res and colour. Camera camera0 supports colour. Camera camera1 supports low_res. Rover rover1 can traverse from waypoint2 to waypoint1, waypoint0 to waypoint2, waypoint2 to waypoint0, waypoint1 to waypoint2. Rover rover0 can traverse from waypoint0 to waypoint2, waypoint1 to waypoint0, waypoint0 to waypoint1, waypoint2 to waypoint0. Waypoint(s) are visible from waypoint0: waypoint2 and waypoint1. Waypoint(s) are visible from waypoint1: waypoint2 and waypoint0. Waypoint(s) are visible from waypoint2: waypoint1 and waypoint0. Objective objective1 is visible from waypoint2. Objective objective0 is visible from waypoint1 and waypoint0. Lander general is at waypoint waypoint1.  Currently, Rover rover1 is at waypoint2. Rover rover0 is at waypoint2. Rovers rover1 and rover0 are available. Soil data was communicated from waypoint waypoint1; Image objective0 was communicated in mode low_res. Rover rover1 has soil analyzed in waypoint waypoint1. Rover rover1 has rock analyzed in waypoint waypoint1. Rover rover0 has image objective0 in mode low_res. Rover rover1 has its camera camera2 calibrated. Store(s) store0 is empty. Store(s) store1 is full. ",
+    "question": "Is the following action applicable in this state: calibrate the camera camera1 on the rover rover0 for the objective objective0 at waypoint waypoint1?",
+    "answer": "no"
+  },
+  {
+    "id": 1685735964174658529,
+    "group": "applicable_actions_bool",
+    "context": "This is a Rovers domain where rovers must navigate between waypoints gathering data and transmitting it back to a lander. Rovers cannot navigate to all waypoints and this makes particular routes impassable to some of the rovers. Data transmission is also constrained by the visibility of the lander from the waypoints. There are 2 rovers, 3 waypoints, 2 stores, 3 cameras, 5 objectives numbered consecutively. Further, there is 1 lander and 3 modes for the camera namely colour, high resolution, and low resolution.  Rover(s) rover0 and rover1 are equipped for soil analysis. Rover(s) rover0 is equipped for rock analysis. Rover(s) rover0 and rover1 are equipped for imaging. Rover rover1 has store store1. Rover rover0 has store store0. Rover rover1 has camera1 and camera0 on board. Rover rover0 has camera2 on board. Camera camera0 can be calibrated on objective0. Camera camera2 can be calibrated on objective4. Camera camera1 can be calibrated on objective0. Camera camera2 supports high_res. Camera camera0 supports low_res and colour. Camera camera1 supports high_res. Rover rover1 can traverse from waypoint1 to waypoint0, waypoint2 to waypoint1, waypoint0 to waypoint1, waypoint1 to waypoint2. Rover rover0 can traverse from waypoint2 to waypoint1, waypoint1 to waypoint0, waypoint0 to waypoint1, waypoint1 to waypoint2. Waypoint(s) are visible from waypoint0: waypoint2 and waypoint1. Waypoint(s) are visible from waypoint1: waypoint2 and waypoint0. Waypoint(s) are visible from waypoint2: waypoint1 and waypoint0. Objective objective3 is visible from waypoint0. Objective objective2 is visible from waypoint0. Objective objective1 is visible from waypoint1 and waypoint0. Objective objective0 is visible from waypoint2. Objective objective4 is visible from waypoint1. Lander general is at waypoint waypoint1.  Currently, Rover rover1 is at waypoint0. Rover rover0 is at waypoint2. Soil can be sampled at the following location(s): waypoint0. Rovers rover1 and rover0 are available. Rock data were communicated from the following waypoints: waypoint2, waypoint1. Soil data was communicated from waypoint waypoint2; Image objective0 was communicated in mode high_res. Rover rover0 has soil analyzed in waypoint waypoint2. Rover rover0 has rock analyzed in waypoint waypoint1. Rover rover0 has rock analyzed in waypoint waypoint2. Rover rover1 has image objective0 in mode high_res. Rover rover1 has its camera camera1 calibrated. Store(s) store1 and store0 are empty. ",
+    "question": "Is the following action applicable in this state: transmit soil data from rover rover1 at waypoint waypoint2 to the lander general at waypoint waypoint1, regarding the soil analysis of waypoint waypoint0?",
+    "answer": "no"
+  },
+  {
+    "id": 5963190029440590986,
+    "group": "applicable_actions_bool",
+    "context": "This is a visitall domain where a robot in a grid must visit all the cells or places in the grid. There are some unavailable places in the grid. The grid size is 4x4, and the location cell names are of the form loc-xi-yj (e.g., loc-x0-y2 or loc-x1-y1). The grid cells are connected to their available neighbors. The unavailable cells are loc-x0-y3 and loc-x0-y0. Currently, the robot is in place loc-x3-y1.The following places have been visited: loc-x2-y3, loc-x3-y3, loc-x1-y0, loc-x1-y2, loc-x3-y1, loc-x1-y3, loc-x0-y1, loc-x2-y2, loc-x0-y2, loc-x2-y0, loc-x1-y1, loc-x2-y1, and loc-x3-y2.",
+    "question": "Is the following action applicable in this state: move to place loc-x1-y2 from place loc-x2-y2?",
+    "answer": "no"
+  },
+  {
+    "id": 2633060706700058163,
+    "group": "applicable_actions_bool",
+    "context": "This is a visitall domain where a robot in a grid must visit all the cells or places in the grid. There are some unavailable places in the grid. The grid size is 4x4, and the location cell names are of the form loc-xi-yj (e.g., loc-x0-y2 or loc-x1-y1). The grid cells are connected to their available neighbors. There are no unavailable cells. Currently, the robot is in place loc-x3-y2.The following places have been visited: loc-x1-y0, loc-x3-y0, loc-x3-y2, loc-x0-y3, loc-x0-y1, loc-x0-y2, loc-x2-y0, loc-x3-y1, and loc-x0-y0.",
+    "question": "Is the following action applicable in this state: Please move to loc-x3-y3 position from loc-x3-y2 position?",
+    "answer": "yes"
+  },
+  {
+    "id": 8865177343481707294,
+    "group": "applicable_actions_bool",
+    "context": "This is a visitall domain where a robot in a grid must visit all the cells or places in the grid. There are some unavailable places in the grid. The grid size is 4x4, and the location cell names are of the form loc-xi-yj (e.g., loc-x0-y2 or loc-x1-y1). The grid cells are connected to their available neighbors. The only unavailable cell is loc-x0-y0. Currently, the robot is in place loc-x0-y3.The following places have been visited: loc-x2-y3, loc-x3-y3, loc-x1-y0, loc-x3-y0, loc-x3-y1, loc-x0-y3, loc-x0-y1, loc-x2-y2, loc-x0-y2, loc-x2-y0, loc-x1-y1, loc-x2-y1, and loc-x3-y2.",
+    "question": "Is the following action applicable in this state: Please move to loc-x1-y3 position from loc-x0-y3 position?",
+    "answer": "yes"
+  },
+  {
+    "id": 5365117269970703559,
+    "group": "applicable_actions_bool",
+    "context": "This is a visitall domain where a robot in a grid must visit all the cells or places in the grid. There are some unavailable places in the grid. The grid size is 4x4, and the location cell names are of the form loc-xi-yj (e.g., loc-x0-y2 or loc-x1-y1). The grid cells are connected to their available neighbors. The only unavailable cell is loc-x0-y0. Currently, the robot is in place loc-x3-y1.The following places have been visited: loc-x3-y3, loc-x2-y2, loc-x3-y1, loc-x2-y1, and loc-x3-y2.",
+    "question": "Is the following action applicable in this state: move to place loc-x0-y1 from place loc-x1-y1?",
+    "answer": "no"
+  },
+  {
+    "id": -1987912395412174555,
+    "group": "applicable_actions_bool",
+    "context": "This is a visitall domain where a robot in a grid must visit all the cells or places in the grid. There are some unavailable places in the grid. The grid size is 4x4, and the location cell names are of the form loc-xi-yj (e.g., loc-x0-y2 or loc-x1-y1). The grid cells are connected to their available neighbors. The only unavailable cell is loc-x0-y0. Currently, the robot is in place loc-x2-y1.The following places have been visited: loc-x2-y3, loc-x3-y3, loc-x1-y2, loc-x1-y3, loc-x2-y2, loc-x3-y1, loc-x2-y1, and loc-x3-y2.",
+    "question": "Is the following action applicable in this state: move to place loc-x1-y1 from place loc-x2-y1?",
+    "answer": "yes"
+  }
+]
