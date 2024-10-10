@@ -1,0 +1,21 @@
+{
+    "id": -981962208469164703,
+    "group": "landmarks_mcq",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 20 cars, numbered consecutively. Currently, the ferry is at l0, with the car c1 on board. The cars are at locations as follows: c7, c19, c4, c12, c17, and c5 are at l1; c11, c15, c0, c13, c18, c6, c8, c2, c10, c16, c9, c3, and c14 are at l0. The goal is to reach a state where the following facts hold: Car c7 is at location l1, Car c15 is at location l0, Car c0 is at location l0, Car c1 is at location l1, Car c13 is at location l0, Car c14 is at location l1, Car c19 is at location l1, Car c18 is at location l1, Car c4 is at location l1, Car c10 is at location l0, Car c2 is at location l1, Car c8 is at location l1, Car c12 is at location l1, Car c9 is at location l0, Car c17 is at location l1, Car c16 is at location l1, Car c6 is at location l1, Car c11 is at location l1, Car c5 is at location l1, and Car c3 is at location l0.",
+    "question": "Which of the following facts is a landmark (must hold at some point along any plan) for the current state? A. Car c6 is on board the ferry. B. Car c9 is at location l1. C. Car c13 is on the ferry. D. Ferry has car c15 on board.",
+    "choices": {
+      "text": [
+        "Car c6 is on board the ferry",
+        "Car c9 is at location l1",
+        "Car c13 is on the ferry",
+        "Ferry has car c15 on board"
+      ],
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "query": "Which fact must hold at some point on any way to the goal from the current state?"
+}

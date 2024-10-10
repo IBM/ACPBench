@@ -1,0 +1,6 @@
+{
+    "id": -3115201149135125328,
+    "group": "action_justification_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 3 locations and 2 cars, numbered consecutively. Currently, the ferry is at l1 location and it is empty. The cars are at locations as follows: c1 and c0 are at l1. The goal is to reach a state where the following facts hold: Car c0 is at location l0 and Car c1 is at location l2.",
+    "question": "Given the plan: \"load the car c1 at location l1 on to the ferry, unload the car c1 from the ferry to location l1, load the car c1 at location l1 on to the ferry, sail from location l1 to location l2, unload the car c1 from the ferry to location l2, load the car c1 at location l2 on to the ferry, unload the car c1 from the ferry to location l2, sail from location l2 to location l1, load the car c0 at location l1 on to the ferry, sail from location l1 to location l0, unload the car c0 from the ferry to location l0\"; can the following action be removed from this plan and still have a valid plan: load the car c1 at location l1 on to the ferry?"
+}

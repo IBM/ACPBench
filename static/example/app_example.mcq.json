@@ -1,0 +1,21 @@
+{
+    "id": -6575941946410689765,
+    "group": "applicable_actions_mc",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 10 cars, numbered consecutively. Currently, the ferry is at l1, with the car c0 on board. The cars are at locations as follows: c4, c7, and c9 are at l1; c6, c3, c1, c5, c2, and c8 are at l0.",
+    "question": "Which of the following actions will be applicable in this state? A. unload the car c7 from the ferry to location l0. B. sail from location l1 to location l0. C. load the car c1 at location l0 on to the ferry. D. load the car c2 at location l0 on to the ferry.",
+    "choices": {
+      "text": [
+        "unload the car c7 from the ferry to location l0",
+        "sail from location l1 to location l0",
+        "load the car c1 at location l0 on to the ferry",
+        "load the car c2 at location l0 on to the ferry"
+      ],
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "query": "Which action will be applicable in this state?"
+}

@@ -1,0 +1,6 @@
+{
+    "id": -1990152005808638716,
+    "group": "reachable_action_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 20 cars, numbered consecutively. Currently, the ferry is at l0 location and it is empty. The cars are at locations as follows: c12, c19, c4, c11, c5, c7, c16, and c1 are at l1; c15, c18, c14, c0, c8, c3, c2, c9, c6, c10, c13, and c17 are at l0.",
+    "question": "Is it possible to transition to a state where the action \"board the car c19 at location l1\" can be applied?"
+  }

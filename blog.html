@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A Benchmark for Evaluating Reasoning about Action, Change and Planning">
+  <meta name="keywords" content="ACPBench, ACP Bench">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>ACPBench: Reasoning about Action, Change, and Planning</title>
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+
+  <script>
+    function loadJSON(file, elementId) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById(elementId).textContent = xhr.responseText;
+                hljs.highlightElement(document.getElementById(elementId));
+            }
+        };
+        xhr.open('GET', file, true);
+        xhr.send();
+    }
+  
+    loadJSON('./static/example/app_example.bool.json', 'app_example_bool');
+    loadJSON('./static/example/areach_example.bool.json', 'areach_example_bool');
+    loadJSON('./static/example/just_example.bool.json', 'just_example_bool');
+    loadJSON('./static/example/land_example.bool.json', 'land_example_bool');
+    loadJSON('./static/example/prog_example.bool.json', 'prog_example_bool');
+    loadJSON('./static/example/reach_example.bool.json', 'reach_example_bool');
+    loadJSON('./static/example/val_example.bool.json', 'val_example_bool');
+    
+  </script>
+
+  <style>
+    pre {
+        max-height: 400px; 
+        overflow-x: auto; 
+        overflow-y: auto;
+        background-color: #f0f0f0; 
+        padding: 10px;
+        border: 1px solid #ccc; 
+        text-align: left;
+    }
+</style>
+
+<script>
+  function loadJSON(file, elementId) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+              document.getElementById(elementId).textContent = xhr.responseText;
+              hljs.highlightElement(document.getElementById(elementId));
+          }
+      };
+      xhr.open('GET', file, true);
+      xhr.send();
+  }
+
+  loadJSON('./static/example/app_example.bool.json', 'app_example_bool');
+  loadJSON('./static/example/areach_example.bool.json', 'areach_example_bool');
+  loadJSON('./static/example/just_example.bool.json', 'just_example_bool');
+  loadJSON('./static/example/land_example.bool.json', 'land_example_bool');
+  loadJSON('./static/example/prog_example.bool.json', 'prog_example_bool');
+  loadJSON('./static/example/reach_example.bool.json', 'reach_example_bool');
+  loadJSON('./static/example/val_example.bool.json', 'val_example_bool');
+
+  loadJSON('./static/example/app_example.mcq.json', 'app_example_mcq');
+  loadJSON('./static/example/areach_example.mcq.json', 'areach_example_mcq');
+  loadJSON('./static/example/just_example.mcq.json', 'just_example_mcq');
+  loadJSON('./static/example/land_example.mcq.json', 'land_example_mcq');
+  loadJSON('./static/example/prog_example.mcq.json', 'prog_example_mcq');
+  loadJSON('./static/example/reach_example.mcq.json', 'reach_example_mcq');
+  loadJSON('./static/example/val_example.mcq.json', 'val_example_mcq');
+  
+</script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title is-bold">
+              <img src="static/images/ACP_BW.png" style="width:1em;vertical-align: middle" alt="Logo">
+              <span class="subsection" style="vertical-align: middle">ACPBench</span>
+            </h1>
+            <h2 class="subtitle is-3 publication-subtitle">
+              Reasoning about Action, Change, and Planning
+            </h2>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://harshakokel.com">Harsha Kokel</a>,
+              </span>
+              <span class="author-block"><a href="https://ctpelok77.github.io/">Michael Katz</a>,
+              </span>
+              <span class="author-block">Kavitha Srinivas,
+              </span>
+              <span class="author-block">Shirin Sohrabi
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"> <img src="static/images/IBM_research.png" style="height:2em;vertical-align: text-bottom" alt="Logo"></span><br>
+              <span class="author-block"><a href="mailto:harsha.kokel@ibm.com">harsha.kokel@ibm.com</a>, 
+                 <a href="mailto:michael.katz1@ibm.com">michael.katz1@ibm.com</a>, 
+                 <a  href="mailto:kavitha.srinivas@ibm.com">kavitha.srinivas@ibm.com</a>,
+                 <a  href="mailto:ssohrab@us.ibm.com">ssohrab@us.ibm.com</a>
+                </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                
+                <span class="link-block">
+                  <a href="./index.html"
+                    class="external-link button is-normal is-rounded is-dark" style="text-decoration:none">
+                    <span class="icon">
+                      <i class="fas fa-home"></i>
+                    </span>
+                    <span>Homepage</span>
+                  </a>
+                </span>
+            
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2410.05669"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/ibm/ACPBench"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/ibm/ACPBench"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <!-- <i class="far fa-images"></i> -->
+                      <p style="font-size:18px">🤗</p>
+                      <!-- 🔗 -->
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+    
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container" style="margin-bottom: 2vh;">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              
+              In recent years, large language models have made tremendous strides in natural language question answering tasks. To take this progress to the next level, researchers have developed various question-answering style reasoning datasets to further assess and improve natural language reasoning.
+
+These datasets evaluate a range of reasoning skills, including common-sense reasoning, arithmetic reasoning, multi-modal reasoning, logical deduction, and tabular QA, among others. While there are many more, the figure below highlights some of the most commonly used benchmarks in the field. These benchmarks play a crucial role in advancing the research goal of complex natural language reasoning, pushing the boundaries of what is possible with language models and paving the way for even more sophisticated AI approaches.
+            </p>
+          </div>
+          
+          <div class="content has-text-centered" style="border">
+            <img src="static/images/reasoning_datasets.png" alt="data-overview" style="width: 60%;" />
+            <p>
+              Word Cloud of Natural Language Reasoning Datasets.
+            </p>
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              As large language models (LLMs) continue to excel in reasoning tasks and benchmarks, researchers are now exploring their potential to take on a more ambitious role; serving LLMs as agents that can orchestrate workflows and make decisions in complex domains that require planning.
+
+              This emerging area of research holds tremendous promise, with potential applications spanning multiple fields. Imagine LLMs capable of autonomously managing business processes, planning a trip, or even managing and analyzing data to provide timely insights.
+              
+              However, despite the excitement surrounding this development, there is a significant gap in our understanding of LLMs' planning capabilities. To fully harness their potential, we need a more systematic evaluation of their strengths and limitations in these areas. By bridging this knowledge gap, we can unlock the true potential of LLMs and unlock a new era of  planning in natural language.
+            </p>
+          </div>
+          <div class="content has-text-justified ">
+            <p>
+              To this end, we introduce <span style="color:#ff6864;font-weight:600">ACP Bench</span>. A question-answering style dataset that evaluates AI-model's ability to reason about <span style="color:#ff6864;">action, change, and planning</span>. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+      
+
+    <!-- TASK SECTION -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 subsection is-light ">
+          <span class="subsection" style="vertical-align: middle">ACPBench Tasks</span>
+        </h1>
+      </div>
+    </section>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              ACPBench consists of boolean and multi-choice questions of the following 7 reasoning tasks.
+            <ul>
+              <li><b>Action Applicability (app)</b> : The first, basic requirement for efficient planning is to determine valid, available actions in a given situation. Various existing work have discussed LLMs fall short of this basic ability. When using GPT-4 Turbo for <a href="https://osu-nlp-group.github.io/TravelPlanner/">travel planning</a>, found that more than 30\% of the failed plans had <i>invalid action dead loop</i> -- that is the model kept repeating invalid actions event when it was informed that the action is invalid. 
+                <div class="box m-5">
+                  <div class="content has-text-centered">
+                    <pre><code class="json" id="app_example_bool"></code></pre>
+                    <p> Action Applicability</p>
+                  </div>
+                </div></li>
+              <li><b>Progression (prog)</b> : The next task evaluates LLMs ability to understand the outcome of an action or change. This ability is important to track information across transitions. The subpar performance of LLMs on the <i>Tracking Shuffled Objects</i> task in the <a href="https://arxiv.org/abs/2210.09261">Big Bench Hard dataset</a> suggests a significant limitation in their ability to reason about the consequences of actions or changes. 
+                Further, a few papers have proposed to use LLMs to execute a plan. For example, <a href="https://github.com/AGI-Edgerunners/Plan-and-Solve-Prompting?tab=readme-ov-file">Plan-and-Solve-Prompting</a> asks LLM to devise a plan and execute it step-by-step to reach the goal. To faithfully execute a plan, it is important for LLMs to demonstrate understanding of progression; how the world state is changed by the action.
+                <div class="box m-5">
+                  <div class="content has-text-centered">
+                    <pre><code class="json" id="prog_example_bool"></code></pre>
+                    <p> Progression </p>
+                  </div>
+                </div>
+              </li>
+              <li><b>Atom Reachability (reach)</b> : The reachability task evaluates if a specific sub-goal can eventually be reached from the given state by taking (possibly multiple) actions. This is a multi-step reasoning task that can help avoid exploring unfeasible options.
+                To maximize the efficiency of LLMs, it is crucial to detect unreachable (sub)goals early on. This can avoid unnecessary prompting and wasteful exploration, ensuring that the LLMs are utilized effectively, especially when used during search.
+                <div class="box m-5">
+                  <div class="content has-text-centered">
+                    <pre><code class="json" id="reach_example_bool"></code></pre>
+                    <p> Atom Reachability</p>
+                  </div>
+                </div>
+              </li>
+              <li><b>Validation (val)</b> : A body of research has advocated the use of LLMs for validation and refinement. In line with this research, we propose a Validation task. Here, given an initial state and a goal condition, the objective is to assess whether the specified sequence of actions is valid, applicable, and successfully achieves the intended goal.
+                <div class="box m-5">
+                  <div class="content has-text-centered">
+                    <pre><code class="json" id="val_example_bool"></code></pre>
+                    <p> Validation</p>
+                  </div>
+                </div>
+              </li>
+              <li><b>Action Reachability (areach)</b> :
+                In API-driven workflows, the objective is typically presented as an instruction to execute a specific function~\cite{toolllm}. In these scenarios, an LLM must identify the necessary prerequisites for execution and formulate a strategy to meet them. Therefore, it is essential for LLMs to assess whether a given instruction is executable from the provided starting point. We formulate this ability as action reachability task.
+                <div class="box m-5">
+                  <div class="content has-text-centered">
+                    <pre><code class="json" id="areach_example_bool"></code></pre>
+                    <p> Action Reachability</p>
+                  </div>
+                </div>
+              </li>
+              <li><b>Justification (just)</b> :
+                A major criteria for plans to be considered reasonable is whether they include unnecessary actions. 
+In the realm of LLMs and API workflows, it is desirable to avoid calling unnecessary APIs as well as reduce wasteful explorations. Hence, it would be of immense value if LLMs are able to identify whether an action is necessary. This corresponds to the justification task in planning literature.
+<div class="box m-5">
+  <div class="content has-text-centered">
+    <pre><code class="json" id="just_example_bool"></code></pre>
+    <p> Justification</p>
+  </div>
+</div>
+                </li>
+                <li><b> Landmarks (land)</b> :LLMs have shown to hallucinate or deviate from the task when the trajectory is long. To alleviate this problem, various work has proposed to use LLMs to decompose the goal into subgoals and achieve each of these subgoals separately.
+                  To do this faithfully, it is crucial for LLMs to be able to identify subgoals that are necessary to achieve the goal. In planning literature such subgoals are often called landmarks. Landmarks are facts that must become true sometime along every plan. So, the last task in ACPBench evaluates LLMs ability to recognize landmarks.
+                  <div class="box m-5">
+                    <div class="content has-text-centered">
+                      <pre><code class="json" id="land_example_bool"></code></pre>
+                      <p> Landmarks</p>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+            </p>
+           
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+
+    <!-- Experimental Results -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 subsection is-light ">
+          <span class="subsection" style="vertical-align: middle">Experimental Results</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+                
+    
+          <div class="container is-max-desktop content">
+              
+            <div class="content  is-centered ">
+    
+              <img src="static/images/acp_mcq_results.png" alt="data-overview" style="max-width: 100%;">
+              <p>Accuracy of leading LLMs on 7 ACPBench tasks (boolean as well as multi-choice questions). The best results are <b>boldfaced</b>, second best are <u>underlined</u>, and the best among the small, open-sourced models are highlighted with *. All models were evaluated with two in-context examples and Chain-of-Thought prompt. The right-most column is mean across tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+  
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified">
+              <p>
+               Upon evaluation of leading LLMs with COT-style prompting and two examples we found that LLAMA-3.1 405B and GPT-4o consistently outperform other models on these tasks, although they do not always achieve the top performance. When it comes to smaller open-sourced               models, Codestral 22B stands out for its exceptional performance on boolean questions, while 
+               Mixtral 8x7B excels in handling multi-choice questions. However, both of them lag significantly
+               behind GPT-4o, which is the best performer in these tasks. Action Reachability and Validation are
+               the most challenging tasks for LLMs. Surprisingly, the GPT family models are not even among top-3
+               for the action reachablity task. cross all the tasks, GPT-4o performs best for boolean questions and
+               LLAMA-3.1 405B performs best for multi-choice questions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="hero is-small">
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+                
+    
+          <div class="container is-max-desktop content">
+              
+            <div class="content  is-centered ">
+    
+              <img src="static/images/domainplot.png" alt="data-overview" style="width:60%;">
+              <p>Comparison of 8 top performing LLMs on multi-choice questions in
+              13 domains of ACPBench. The mean of performance across the top-8 models is presented with dotted line in Black. The mean line indicates that none of the domains are exceptionally easy
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified">
+              <p>
+                A domain-wise analysis of the performance of LLMs on multi-choice questions. This analysis showcases the top 8 performing models. The average performance of these top-8 models is shown as the dotted line in black. This indicates that 
+                across models no specific domain seems too easy. However, Rovers, FloorTile, Blocksworld, Alfworld and Satellite domains pose the greatest challenges to LLMs, in that particular order. 
+              </p>
+            </div>
+            <div class="content box has-text-justified">
+              <span style="color:#ff6864;font-weight:600">
+                While the largest LLMs achieve more than 80% accuracy on few tasks, the variance in performance across tasks and across LLMs is still big. This signifies the long way to go before they can be reliably used in practical scenarios.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  <!-- @PAN TODO: bibtex -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3 has-text-centered">BibTeX</h2>
+      <pre><code>@inproceedings{kokel2024ACP,
+  title={ACPBench: Reasoning about Action, Change, and Planning},
+  author={Kokel, Harsha and Katz, Michael and Srinivas, Kavitha and Sohrabi, Shirin},
+  booktitle={---ArXiv Link TBA---}
+}</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="container is-max-desktop content">
+    <div class="content has-text-centered">
+      To evaluate your LLM on ACP Bench, please consult the <a href="https://github.com/ibm/ACPBench">Readme</a> for instructions. If you have any questions or feedback, feel free to contact Harsha Kokel at harsha.kokel@ibm.com.</br></br></br></br>
+    </div>
+    </div>
+  </section>
+  <section></section>
+
+  <footer class="footer">
+    <!-- <div class="container"> -->
+    
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a>, <a href="https://mathvista.github.io/">MathVista</a>, and <a href="https://osu-nlp-group.github.io/TravelPlanner/">TravelPlanner</a> licensed under a <a
+              rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </footer>
+
+</body>
+
+</html>

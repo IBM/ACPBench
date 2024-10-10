@@ -1,0 +1,6 @@
+{
+    "id": -8215166616105943671,
+    "group": "progression_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 5 cars, numbered consecutively. Currently, the ferry is at l0 location and it is empty. The cars are at locations as follows: c1, c0, c3, and c2 are at l0; c4 is at l1.",
+    "question": "Will the fact \"Car c4 is on the ferry\" hold after performing the action \"sail from location l0 to location l1\" in the current state?"
+}

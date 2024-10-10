@@ -1,0 +1,21 @@
+{
+    "id": 6622905800496884581,
+    "group": "reachable_action_mc",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 10 cars, numbered consecutively. Currently, the ferry is at l1, with the car c3 on board. The cars are at locations as follows: c9, c2, c6, c8, c0, and c1 are at l0; c7, c4, and c5 are at l1.",
+    "question": "Which of the following actions can eventually be applied? A. sail from location c2 to location l1. B. unload the car c7 from the ferry to location l0. C. unload the car c3 from the ferry to location c7. D. unload the car c8 from the ferry to location c3.",
+    "choices": {
+      "text": [
+        "sail from location c2 to location l1",
+        "unload the car c7 from the ferry to location l0",
+        "unload the car c3 from the ferry to location c7",
+        "unload the car c8 from the ferry to location c3"
+      ],
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "query": "Which action is reachable from this state?"
+}

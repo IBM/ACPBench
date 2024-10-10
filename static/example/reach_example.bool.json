@@ -1,0 +1,6 @@
+{
+    "id": -2426698749034015429,
+    "group": "reachable_atom_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 10 cars, numbered consecutively. Currently, the ferry is at l0 location and it is empty. The cars are at locations as follows: c2, c7, and c5 are at l1; c3, c4, c6, c9, c1, c0, and c8 are at l0.",
+    "question": "Is it possible to transition to a state where the following holds: Car c2 is at location c0?"
+}

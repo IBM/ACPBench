@@ -1,0 +1,6 @@
+{
+    "id": 1263458375528833442,
+    "group": "landmarks_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 20 cars, numbered consecutively. Currently, the ferry is at l1 location and it is empty. The cars are at locations as follows: c14, c8, c3, c2, c10, c0, c6, c13, c11, c16, c9, c15, c18, and c17 are at l0; c7, c12, c19, c1, c4, and c5 are at l1. The goal is to reach a state where the following facts hold: Car c11 is at location l1, Car c8 is at location l1, Car c3 is at location l0, Car c7 is at location l1, Car c10 is at location l0, Car c0 is at location l0, Car c12 is at location l1, Car c19 is at location l1, Car c13 is at location l0, Car c17 is at location l1, Car c1 is at location l1, Car c9 is at location l0, Car c15 is at location l0, Car c14 is at location l1, Car c2 is at location l1, Car c4 is at location l1, Car c16 is at location l1, Car c6 is at location l1, Car c18 is at location l1, and Car c5 is at location l1.",
+    "question": "Is the following fact a landmark (must hold at some point along any plan) for the current state? Car c12 is at location l0"
+}

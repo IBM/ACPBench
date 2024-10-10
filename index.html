@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A Benchmark for Evaluating Reasoning about Action, Change and Planning">
+  <meta name="keywords" content="ACPBench, ACP Bench">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>ACPBench: Reasoning about Action, Change, and Planning</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+  <style>
+    pre {
+        max-height: 400px; 
+        overflow-x: auto; 
+        overflow-y: auto;
+        background-color: #f0f0f0; 
+        padding: 10px;
+        border: 1px solid #ccc; 
+        text-align: left;
+    }
+</style>
+
+<script>
+  function loadJSON(file, elementId) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+              document.getElementById(elementId).textContent = xhr.responseText;
+              hljs.highlightElement(document.getElementById(elementId));
+          }
+      };
+      xhr.open('GET', file, true);
+      xhr.send();
+  }
+
+  loadJSON('./static/example/app_example.bool.json', 'app_example_bool');
+  loadJSON('./static/example/areach_example.bool.json', 'areach_example_bool');
+  loadJSON('./static/example/just_example.bool.json', 'just_example_bool');
+  loadJSON('./static/example/land_example.bool.json', 'land_example_bool');
+  loadJSON('./static/example/prog_example.bool.json', 'prog_example_bool');
+  loadJSON('./static/example/reach_example.bool.json', 'reach_example_bool');
+  loadJSON('./static/example/val_example.bool.json', 'val_example_bool');
+
+  loadJSON('./static/example/app_example.mcq.json', 'app_example_mcq');
+  loadJSON('./static/example/areach_example.mcq.json', 'areach_example_mcq');
+  loadJSON('./static/example/just_example.mcq.json', 'just_example_mcq');
+  loadJSON('./static/example/land_example.mcq.json', 'land_example_mcq');
+  loadJSON('./static/example/prog_example.mcq.json', 'prog_example_mcq');
+  loadJSON('./static/example/reach_example.mcq.json', 'reach_example_mcq');
+  loadJSON('./static/example/val_example.mcq.json', 'val_example_mcq');
+  
+</script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title is-bold">
+              <img src="static/images/ACP_BW.png" style="width:1em;vertical-align: middle" alt="Logo">
+              <span class="subsection" style="vertical-align: middle">ACPBench</span>
+            </h1>
+            <h2 class="subtitle is-3 publication-subtitle">
+              Reasoning about Action, Change, and Planning
+            </h2>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://harshakokel.com">Harsha Kokel</a>,
+              </span>
+              <span class="author-block"><a href="https://ctpelok77.github.io/">Michael Katz</a>,
+              </span>
+              <span class="author-block">Kavitha Srinivas,
+              </span>
+              <span class="author-block">Shirin Sohrabi
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><img src="static/images/IBM_research.png" style="height:2em;vertical-align: text-bottom" alt="Logo"></span><br>
+              <span class="author-block"><a href="mailto:harsha.kokel@ibm.com">harsha.kokel@ibm.com</a>, 
+                 <a href="mailto:michael.katz1@ibm.com">michael.katz1@ibm.com</a>, 
+                 <a  href="mailto:kavitha.srinivas@ibm.com">kavitha.srinivas@ibm.com</a>,
+                 <a  href="mailto:ssohrab@us.ibm.com">ssohrab@us.ibm.com</a>
+                </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2410.05669"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Blog Link. -->
+                <span class="link-block">
+                  <a href="./blog.html"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-blog"></i>
+                    </span>
+                    <span>Blog</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/ibm/ACPBench"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/ibm/ACPBench"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <!-- <i class="far fa-images"></i> -->
+                      <p style="font-size:18px">🤗</p>
+                      <!-- 🔗 -->
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+    
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container" style="margin-bottom: 2vh;">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              There is an increasing body of work using Large Language Models (LLMs) as agents for orchestrating workflows and making decisions in domains that require planning and multi-step reasoning. As a result, it is imperative to evaluate LLMs on core skills required for planning. Hence, we distill 7 atomic
+              reasoning tasks that are critical for reliable planning and
+              create datasets of such tasks. These tasks focus on reasoning
+              about Actions, Change (transitions) and Planning; hence,
+              we call our benchmark as ACPBench. The tasks include
+              single step reasoning, like evaluating whether an action can
+              be performed in the described state, as well as multi step
+              reasoning, like whether a sequence of actions is a valid plan
+              for the described state and the described goal. 
+            </p>
+          </div>
+          <div class="content has-text-centered" style="border">
+            <img src="static/images/introplot.png" alt="data-overview" style="width: 60%;" />
+            <p>
+              Performance of few typical LLMs over different tasks in ACPBench. While the largest LLMs achieve more than 80% accuracy on few tasks, the variance in performance across tasks and
+across LLMs is still big. This signifies the long way to go before they can be reliably used in practical scenarios.
+            </p>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+      
+
+    <!-- DATASET SECTION -->
+    <section class="hero is-small">
+      <div class="content has-text-centered">
+        <h1 class="title is-1 subsection is-light ">
+          <span class="subsection" style="vertical-align: middle">ACPBench Overview</span>
+        </h1>
+      </div>
+    </section>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              ACPBench  consists of 7 reasoning tasks over 13 domains. The 13 domains include 11 classical planning domains, <a href="https://alfworld.github.io"></a>ALFWorld, and a novel Swap domain. The 7 tasks included in ACPBench are Action Applicability (app), Progression (prog), Atom Reachability (reach), Validation (val), Action Reachability (areach), Justification (just), and Landmarks (land).  ACPBench dev and test set is available for download in this <a href="https://github.com/ibm/ACPBench">GitHub Repo</a> as well as on <a href="https://huggingface.co/datasets/ibm/ACPBench">Hugging Face Dataset</a>. 
+            <ul>
+              <li><b>Dev Set</b>: ACPBench Dev set consists of 40 examples for each task, with answers.
+              <li><b>Test Set</b>: ACPBench Test Set features 10 boolean (Bool) and 10 multiple-choice (MCQ) style questions for each domain and each task, without answers. 
+            </ul>
+            </p>
+            Example boolean questions:
+            </p>
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="app_example_bool"></code></pre>
+                  <p> Action Applicability</p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="prog_example_bool"></code></pre>
+                  <p> Progression </p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="reach_example_bool"></code></pre>
+                  <p> Atom Reachability</p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="val_example_bool"></code></pre>
+                  <p> Validation</p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="areach_example_bool"></code></pre>
+                  <p> Action Reachability</p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="just_example_bool"></code></pre>
+                  <p> Justification</p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="land_example_bool"></code></pre>
+                  <p> Landmarks</p>
+                </div>
+              </div>
+            </div>
+          </p>
+          Example multi-choice questions:
+          </p>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <pre><code class="json" id="app_example_mcq"></code></pre>
+                <p> Action Applicability</p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <pre><code class="json" id="prog_example_mcq"></code></pre>
+                <p> Progression </p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <pre><code class="json" id="reach_example_mcq"></code></pre>
+                <p> Atom Reachability</p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <pre><code class="json" id="val_example_mcq"></code></pre>
+                <p> Validation</p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <pre><code class="json" id="areach_example_mcq"></code></pre>
+                <p> Action Reachability</p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <pre><code class="json" id="just_example_mcq"></code></pre>
+                <p> Justification</p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <pre><code class="json" id="land_example_mcq"></code></pre>
+                <p> Landmarks</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+
+  <!-- @PAN TODO: bibtex -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3 has-text-centered">BibTeX</h2>
+      <pre><code>@inproceedings{kokel2024ACP,
+  title={ACPBench: Reasoning about Action, Change, and Planning},
+  author={Kokel, Harsha and Katz, Michael and Srinivas, Kavitha and Sohrabi, Shirin},
+  booktitle={arXiv 2410.05669}
+}</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="container is-max-desktop content">
+    <div class="content has-text-centered">
+      To evaluate your LLM on ACP Bench, please consult the <a href="https://github.com/ibm/ACPBench">Readme</a> for instructions. If you have any questions or feedback, feel free to contact Harsha Kokel at harsha.kokel@ibm.com.</br></br></br></br>
+    </div>
+    </div>
+  </section>
+  <section></section>
+
+
+  <footer class="footer">
+    <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a>, <a href="https://mathvista.github.io/">MathVista</a>, and <a href="https://osu-nlp-group.github.io/TravelPlanner/">TravelPlanner</a> licensed under a <a
+              rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </footer>
+
+</body>
+
+</html>

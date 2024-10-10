@@ -1,0 +1,21 @@
+{
+    "id": 3903123391386162053,
+    "group": "action_justification_mcq",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 2 cars, numbered consecutively. Currently, the ferry is at l0 location and it is empty. The cars are at locations as follows: c1 and c0 are at l0. The goal is to reach a state where the following facts hold: Car c0 is at location l1 and Car c1 is at location l1.",
+    "question": "Given the plan: \"board the car c0 at the location l0, travel by sea from location l0 to location l1, unload the car c0 from the ferry to location l1, travel by sea from location l1 to location l0, board the car c1 at the location l0, travel by sea from location l0 to location l1, unload the car c1 from the ferry to location l1, board the car c0 at the location l1, unload the car c0 from the ferry to location l1\"; which of the following pairs of consecutive actions can be removed from this plan and still have a valid plan? A. board the car c0 at the location l0 and travel by sea from location l0 to location l1. B. unload the car c1 from the ferry to location l1 and board the car c0 at the location l1. C. travel by sea from location l0 to location l1 and unload the car c1 from the ferry to location l1. D. board the car c0 at the location l1 and unload the car c0 from the ferry to location l1.",
+    "choices": {
+      "text": [
+        "board the car c0 at the location l0 and travel by sea from location l0 to location l1",
+        "unload the car c1 from the ferry to location l1 and board the car c0 at the location l1",
+        "travel by sea from location l0 to location l1 and unload the car c1 from the ferry to location l1",
+        "board the car c0 at the location l1 and unload the car c0 from the ferry to location l1"
+      ],
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "query": "Given the plan: \"board the car c0 at the location l0, travel by sea from location l0 to location l1, unload the car c0 from the ferry to location l1, travel by sea from location l1 to location l0, board the car c1 at the location l0, travel by sea from location l0 to location l1, unload the car c1 from the ferry to location l1, board the car c0 at the location l1, unload the car c0 from the ferry to location l1\"; which pair of consecutive actions can be removed from this plan?"
+}

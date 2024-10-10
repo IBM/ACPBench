@@ -1,0 +1,6 @@
+{
+    "id": -2339048290501167365,
+    "group": "validation_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 2 cars, numbered consecutively. Currently, the ferry is at l0 location and it is empty. The cars are at locations as follows: c0 and c1 are at l0. The goal is to reach a state where the following facts hold: Car c0 is at location l1 and Car c1 is at location l1.",
+    "question": "Is the following sequence of actions \"board car c0 at location l0, debark car c0 to location l0 from the ferry, travel by sea from location l0 to location l1, travel by sea from location l1 to location l0, board car c1 at location l0, travel by sea from location l0 to location l1, debark car c1 to location l1 from the ferry, board car c1 at location l1, debark car c1 to location l1 from the ferry, travel by sea from location l1 to location l0, board car c0 at location l0, debark car c0 to location l0 from the ferry, board car c0 at location l0, travel by sea from location l0 to location l1, debark car c0 to location l1 from the ferry\" valid in this problem?"
+}

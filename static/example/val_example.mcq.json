@@ -1,0 +1,21 @@
+{
+    "id": -2425816914857415723,
+    "group": "validation_mcq",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 2 cars, numbered consecutively. Currently, the ferry is at l0 location and it is empty. The cars are at locations as follows: c1 and c0 are at l0. The goal is to reach a state where the following facts hold: Car c0 is at location l1 and Car c1 is at location l1.",
+    "question": "Which of the following claims is true with regard to the following sequence of actions \"board the car c1 at location l0 on to the ferry, debark car c1 to location l0 from the ferry, board the car c0 at location l0 on to the ferry, travel by sea from location l0 to location l1, debark car c0 to location l1 from the ferry, board the car c0 at location l1 on to the ferry, debark car c0 to location l1 from the ferry, travel by sea from location l1 to location l0, board the car c1 at location l0 on to the ferry, debark car c1 to location l0 from the ferry, board the car c1 at location l0 on to the ferry, travel by sea from location l0 to location l1, debark car c1 to location l1 from the ferry, board the car c0 at location l1 on to the ferry, debark car c0 to location l1 from the ferry\"  A. The sequence is not valid. B. The sequence is not applicable. C. The sequence is applicable, but does not achieve the goal. D. The sequence is a plan.",
+    "choices": {
+      "text": [
+        "The sequence is not valid",
+        "The sequence is not applicable",
+        "The sequence is applicable, but does not achieve the goal",
+        "The sequence is a plan"
+      ],
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "query": "Is the following sequence of actions applicable in the current state: \"board the car c1 at location l0 on to the ferry debark car c1 to location l0 from the ferry board the car c0 at location l0 on to the ferry travel by sea from location l0 to location l1 debark car c0 to location l1 from the ferry board the car c0 at location l1 on to the ferry debark car c0 to location l1 from the ferry travel by sea from location l1 to location l0 board the car c1 at location l0 on to the ferry debark car c1 to location l0 from the ferry board the car c1 at location l0 on to the ferry travel by sea from location l0 to location l1 debark car c1 to location l1 from the ferry board the car c0 at location l1 on to the ferry debark car c0 to location l1 from the ferry\" and does it achieve the goal?"
+}

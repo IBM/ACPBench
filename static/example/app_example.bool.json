@@ -1,0 +1,6 @@
+{
+    "id": -8342636639526456067,
+    "group": "applicable_actions_bool",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 20 cars, numbered consecutively. Currently, the ferry is at l1 location and it is empty. The cars are at locations as follows: c7, c11, c2, c16, c14, c19, c5, c4, c12, c17, and c1 are at l1; c13, c8, c6, c18, c0, c3, c9, c10, and c15 are at l0.",
+    "question": "Is the following action applicable in this state: travel by sea from location l1 to location l0?"
+}

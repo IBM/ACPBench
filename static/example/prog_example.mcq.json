@@ -1,0 +1,21 @@
+{
+    "id": -6721318970102316394,
+    "group": "progression_mcq",
+    "context": "This is a ferry domain, where the task is to transport cars from their start to their goal locations, using a ferry. Each location is accessible by ferry from each other location. The cars can be debarked or boarded, and the ferry can carry only one car at a time. There are 2 locations and 10 cars, numbered consecutively. Currently, the ferry is at l1, with the car c2 on board. The cars are at locations as follows: c0, c3, c6, c1, c8, and c9 are at l0; c7, c5, and c4 are at l1.",
+    "question": "Which of the following facts hold after performing the action \"sail from location l1 to location l0\" in the current state? A. The ferry is at l0 location and The ferry is at l1 location. B. The ferry is at l1 location and The ferry is empty. C. The ferry is empty. D. The ferry is at l0 location.",
+    "choices": {
+      "text": [
+        "The ferry is at l0 location and The ferry is at l1 location",
+        "The ferry is at l1 location and The ferry is empty",
+        "The ferry is empty",
+        "The ferry is at l0 location"
+      ],
+      "label": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "query": "Which fact will hold after performing the action \"sail from location l1 to location l0\" in the current state?"
+}
