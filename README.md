@@ -3,13 +3,12 @@
 <p align="center">
     <a href="https://ibm.github.io/ACPBench">🏠 Homepage</a> •
     <a href="https://arxiv.org/abs/2410.05669">📄 Paper</a> •
-    <a href="https://huggingface.co/datasets/ibm/ACPBench">🤗 Dataset</a> •
-    <a href="https://ibm.github.io/ACPBench/Leaderboard">🏆 Leaderboard</a>
+    <a href="https://huggingface.co/datasets/ibm/ACPBench">🤗 Dataset</a>
 </p>
 <p align="center">
-    <a href="#-getting-started">🔥 Getting Started</a> •
-    <a href="#-citation">📜 Citation</a> •
-    <a href="#-acknowledgement">🙏 Acknowledgement</a> 
+    <a href="https://github.com/ibm/ACPBench#-getting-started">🔥 Getting Started</a> •
+    <a href="https://github.com/ibm/ACPBench#-citation">📜 Citation</a> •
+    <a href="https://github.com/ibm/ACPBench#-acknowledgement">🙏 Acknowledgement</a> 
 </p>
 
 This is the code for ACPBench Homepage. 
