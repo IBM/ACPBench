@@ -219,12 +219,13 @@ These datasets evaluate a range of reasoning skills, including common-sense reas
 
               This emerging area of research holds tremendous promise, with potential applications spanning multiple fields. Imagine LLMs capable of autonomously managing business processes, planning a trip, or even managing and analyzing data to provide timely insights.
               
-              However, despite the excitement surrounding this development, there is a significant gap in our understanding of LLMs' planning capabilities. To fully harness their potential, we need a more systematic evaluation of their strengths and limitations in these areas. By bridging this knowledge gap, we can unlock the true potential of LLMs and unlock a new era of  planning in natural language.
+              However, despite the excitement surrounding this development, there is a significant gap in our understanding of LLMs' planning capabilities.
             </p>
           </div>
           <div class="content has-text-justified ">
             <p>
-              To this end, we introduce <span style="color:#ff6864;font-weight:600">ACP Bench</span>. A question-answering style dataset that evaluates AI-model's ability to reason about <span style="color:#ff6864;">action, change, and planning</span>. 
+              To this end, we introduce <span style="color:#ff6864;font-weight:600">ACP Bench</span>. A question-answering style dataset that evaluates AI-model's ability to reason about <span style="color:#ff6864;">Action, Change, and Planning</span>. 
+              To fully harness LLMs' potential for planning, ACPBench performs a more systematic evaluation of their strengths and limitations in tasks that are central to planning, indeed not being able to perform these tasks perfectly precludes the ability formulate plans.
             </p>
           </div>
         </div>
@@ -331,7 +332,7 @@ In the realm of LLMs and API workflows, it is desirable to avoid calling unneces
     <section class="hero is-light is-small">
       <div class="hero-body has-text-centered">
         <h1 class="title is-1 subsection is-light ">
-          <span class="subsection" style="vertical-align: middle">Experimental Results</span>
+          <span class="subsection" style="vertical-align: middle"> LLMs' Performance Evaluation</span>
         </h1>
       </div>
     </section>
@@ -346,7 +347,7 @@ In the realm of LLMs and API workflows, it is desirable to avoid calling unneces
             <div class="content  is-centered ">
     
               <img src="static/images/acp_mcq_results.png" alt="data-overview" style="max-width: 100%;">
-              <p>Accuracy of leading LLMs on 7 ACPBench tasks (boolean as well as multi-choice questions). The best results are <b>boldfaced</b>, second best are <u>underlined</u>, and the best among the small, open-sourced models are highlighted with *. All models were evaluated with two in-context examples and Chain-of-Thought prompt. The right-most column is mean across tasks.
+              <p>Accuracy of 22 leading LLMs on 7 ACPBench tasks (boolean as well as multi-choice questions). The best results are <b>boldfaced</b>, second best are <u>underlined</u>, and the best among the small, open-sourced models are highlighted with *. All models were evaluated with two in-context examples and Chain-of-Thought prompt. The right-most column is mean across tasks.
               </p>
             </div>
           </div>
@@ -374,6 +375,8 @@ In the realm of LLMs and API workflows, it is desirable to avoid calling unneces
         </div>
       </div>
     </section>
+
+
 
 
     <section class="hero is-small">
@@ -416,6 +419,51 @@ In the realm of LLMs and API workflows, it is desirable to avoid calling unneces
       </div>
     </section>
 
+            <!-- Experimental Results -->
+            <section class="hero is-light is-small">
+              <div class="hero-body has-text-centered" id="o1">
+                <h1 class="title is-1 subsection is-light " >
+                  <span class="subsection" style="vertical-align: middle"> OpenAI o1 Performance Evaluation</span>
+                </h1>
+              </div>
+            </section>
+    
+            
+            <section class="section">
+              <div class="container">
+                <div class="columns is-centered has-text-centered">
+                  <div class="column is-four-fifths">
+                    <div class="content has-text-justified">
+                      <p>
+                        Recently, <a href="https://openai.com/index/learning-to-reason-with-llms/">OpenAI released a series of LLM-based reasoning models, o1</a>, that shows significant boost over GPT-4o on benchmarks that require reasoning. A comparison of o1 with LLMs is not even-handed as o1 uses multiple interactions and generates much more tokens than the max-limit provided to LLMs (see sec 4.4 in the paper). So we do not include it in the LLMs' Performance Evaluation. Instead, we present the performance difference of OpenAI o1 models (with zeroshot IO and 2-shot COT prompts) from the best performing LLMs. Our results indicate that o1 models fail to yield performance gains for boolean questions, but demonstrate notable improvements on MCQs. Specifically, o1 preview consistently performs better or equal to the best performing model for MCQs. 
+                      </p>
+                    </div>
+                    <div class="columns is-centered m-6">
+                      <div class="column is-full has-text-centered content">
+                              
+                  
+                        <div class="container is-max-desktop content">
+                            
+                          <div class="content  is-centered ">
+                  
+                            <img src="static/images/o1_perf.png" alt="data-overview">
+                            <p>Comparing OpenAI o1 models with the best LLM. Positive difference shows o1 model performing better than the best of the LLMs. Negative difference is when o1 model lags behind the best LLM.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content box has-text-justified">
+                      <span style="color:#ff6864;font-weight:600">
+                        Our findings with OpenAI o1, a multi-turn reasoning
+model, reveal significant gains in performance on multiple-
+choice questions, yet surprisingly, no notable progress is made
+on boolean questions.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
 
   <!-- @PAN TODO: bibtex -->
