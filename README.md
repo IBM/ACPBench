@@ -340,7 +340,7 @@ Example:
 
 > [!IMPORTANT]
 >
-> Checkout our [blog](#) to get more insight on each of these tasks, and why we need yet another question-answering dataset.
+> Checkout our [blog](https://ibm.github.io/ACPBench/blog.html) to get more insight on each of these tasks, and why we need yet another question-answering dataset.
 
 
 > [!WARNING]
