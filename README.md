@@ -419,7 +419,7 @@ To use [evaluation_script.py](./evaluation_script.py) to obtain the score, dump 
 
 Once the json file is created for a task, you can use the the following command to print the score
 ```bash
-python evaluation_script.py --results <results-json-filepath> --dev <dev-json-filepath>
+python evaluation_script.py --results <results-json-filepath> --gt <ground-truth-json-filepath>
 ```
 
 ## 📜 Citation
