@@ -424,11 +424,15 @@ python evaluation_script.py --results <results-json-filepath> --gt <ground-truth
 
 ## 📜 Citation
 ```
-@article{kokel2024acp,
-  title={ACPBench: Reasoning about Action, Change, and Planning},
-  author={Kokel, Harsha and Katz, Michael and Srinivas, Kavitha and Sohrabi, Shirin},
-  journal={arXiv 2410.05669},
-  year={2024}
+@inproceedings{kokel2024acp
+  author       = {Harsha Kokel and
+                  Michael Katz and
+                  Kavitha Srinivas and
+                  Shirin Sohrabi},
+  title        = {ACPBench: Reasoning about Action, Change, and Planning},
+  booktitle    = {{AAAI}},
+  publisher    = {{AAAI} Press},
+  year         = {2024}
 }
 ```
 
