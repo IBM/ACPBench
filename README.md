@@ -432,7 +432,7 @@ python evaluation_script.py --results <results-json-filepath> --gt <ground-truth
   title        = {ACPBench: Reasoning about Action, Change, and Planning},
   booktitle    = {{AAAI}},
   publisher    = {{AAAI} Press},
-  year         = {2024}
+  year         = {2025}
 }
 ```
 
