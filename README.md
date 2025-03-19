@@ -4,9 +4,11 @@
     <a href="https://ibm.github.io/ACPBench">🏠 Homepage</a> •
     <a href="https://arxiv.org/abs/2410.05669">📄 Paper</a> •
     <a href="https://huggingface.co/datasets/ibm/ACPBench">🤗 Dataset</a>
+    
 </p>
 <p align="center">
     <a href="https://github.com/ibm/ACPBench#-getting-started">🔥 Getting Started</a> •
+    <a href="https://youtu.be/zlIOeYlo52M">▶️ Recording</a> •
     <a href="https://github.com/ibm/ACPBench#-citation">📜 Citation</a> •
     <a href="https://github.com/ibm/ACPBench#-acknowledgement">🙏 Acknowledgement</a> 
 </p>
