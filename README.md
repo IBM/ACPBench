@@ -11,6 +11,14 @@
     <a href="#-citation">📜 Citation</a> •
     <a href="#-acknowledgement">🙏 Acknowledgement</a> 
 </p>
+
+
+> [!IMPORTANT]
+>
+> Out AAAI talk recording is [now available on youtube](https://youtu.be/zlIOeYlo52M).
+
+
+
 ACPBench is a dataset to evaluate reasoning ability of LLMs about Action, Change, and Planning. It consists of 7 tasks.
 
 **1. Applicability (app)**, checks which actions are applicable in a state. 
