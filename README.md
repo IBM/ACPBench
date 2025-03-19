@@ -7,6 +7,7 @@
 </p>
 <p align="center">
     <a href="#-getting-started">🔥 Getting Started</a> •
+    <a href="https://youtu.be/zlIOeYlo52M">▶️ Recording</a> •
     <a href="#-citation">📜 Citation</a> •
     <a href="#-acknowledgement">🙏 Acknowledgement</a> 
 </p>
