@@ -16,6 +16,10 @@
 This is the code for ACPBench Homepage. 
 
 
+> [!IMPORTANT]
+>
+> [ACPBench Hard](https://openreview.net/forum?id=cfsVixNuJw) dataset is coming soon.
+
 This is adapted from [Nerfies website](https://nerfies.github.io), [MathVista](https://mathvista.github.io/)  and [Travel Planner](https://osu-nlp-group.github.io/TravelPlanner/)
 
 # Website License
