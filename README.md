@@ -15,7 +15,7 @@
 
 > [!IMPORTANT]
 >
-> Out AAAI talk recording is [now available on youtube](https://youtu.be/zlIOeYlo52M).
+> AAAI talk recording is [now available on youtube](https://youtu.be/zlIOeYlo52M). [ACPBench Hard](https://openreview.net/forum?id=cfsVixNuJw) dataset is coming soon.
 
 
 
@@ -433,7 +433,7 @@ python evaluation_script.py --results <results-json-filepath> --gt <ground-truth
 
 ## 📜 Citation
 ```
-@inproceedings{kokel2024acp
+@inproceedings{kokel2025acp
   author       = {Harsha Kokel and
                   Michael Katz and
                   Kavitha Srinivas and
