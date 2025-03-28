@@ -1,0 +1,22 @@
+tag:
+  - acp_gen_2shot
+  - acp_bench_hard
+dataset_path: json
+test_split: test
+dataset_name: null
+doc_to_target: "{{answer}}"
+output_type: generate_until
+num_fewshot: 2
+generation_kwargs:
+  until:
+    - "\n\n\n\n"
+    - "**Question**:"
+    - "**Question:**"
+    - "Q:"
+  do_sample: false
+  max_gen_toks: 1000
+  temperature: 0.0
+metric_list:
+  - metric: "bypass"
+metadata:
+  version: 1.0

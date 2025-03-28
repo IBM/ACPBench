@@ -1,0 +1,12 @@
+clingo==5.6.2
+tarski==0.8.2
+kstar-planner>=1.4.1
+forbiditerative>=1.0.13
+python-dotenv
+tqdm
+numpy
+python-dateutil
+jsonlines
+pddl==0.4.2
+scipy
+

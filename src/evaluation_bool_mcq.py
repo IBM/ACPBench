@@ -1,6 +1,6 @@
 import argparse
 import json 
-from evaluate import load
+import evaluate as hf_evaluate
 
 def compute_accuracy(args):
     gt_json = json.load(open(args.gt,'r'))
@@ -14,9 +14,9 @@ def compute_accuracy(args):
         assert sample['group'] == response['doc']['group'], "Mismatch in example groups"
         reference += response['filtered_resps']
         prediction += sample['answer']
-    exact_match = evaluate.load("exact_match")
+    exact_match = hf_evaluate.load("exact_match")
     results = exact_match.compute(references=reference, predictions=prediction)
-    print(f"Reference: {args.dev}")
+    print(f"Reference: {args.gt}")
     print(f"Prediction: {args.results}")
     print("Exact Match: ",round(results["exact_match"], 2))
     return results

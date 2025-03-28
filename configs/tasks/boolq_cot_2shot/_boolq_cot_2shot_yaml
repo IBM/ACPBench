@@ -1,8 +1,9 @@
 tag:
   - acp_bool_cot_2shot
+  - acp_bench
 output_type: generate_until
-dataset_path: ibm/acp_bench
-test_split: validation
+dataset_path: ibm-research/acp_bench
+test_split: test
 num_fewshot: 2
 doc_to_target: "{{answer}}"
 doc_to_text: "**Question**: {{context}}  {{question}} **Thoughts**:"
@@ -10,7 +11,7 @@ filter_list:
   - name: "extract-yes-no"
     filter:
       - function: "regex"
-        regex_pattern: "((?<=The answer is )(.*)(?=.)|(?<=the answer is )(.*)(?=.)|(?<=The answer: )(.*)(?=.)|(?<=The final answer: )(.*)(?=.)|(?<=..Final Answer..: )(.*)(?=.)|(?<=..answer..: )(.*)(?=.)|(?<=..Answer..: )(.*)(?=.))"
+        regex_pattern: "((?<=The answer is )(.*)(?=.)|(?<=the answer is )(.*)(?=.)|(?<=The answer: )(.*)(?=.)|(?<=The final answer: )(.*)(?=.)|(?<=..Final Answer..: )(.*)(?=.)|(?<=..answer..: )(.*)(?=.)|(?<=..Answer..: )(.*)(?=.)|\\b(Yes|No|yes|no)\\b)"
       - function: "take_first"
 generation_kwargs:
   until:
