@@ -107,7 +107,7 @@ We release dev and test sets for 8 tasks in ACPBench-Hard in this repo. The data
 ```bash
 lm_eval --model <your-model> \
     --model_args <model-args> \
-    --tasks acp_benchacp_bench_hard \
+    --tasks acp_bench_hard \
     --output <output-folder> \
     --log_samples \
     --include_path ./configs/tasks
