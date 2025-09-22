@@ -46,13 +46,14 @@ About Action, Change, And Planning</title>
         xhr.send();
     }
   
-    loadJSON('./static/example/app_example.bool.json', 'app_example_bool');
-    loadJSON('./static/example/areach_example.bool.json', 'areach_example_bool');
-    loadJSON('./static/example/just_example.bool.json', 'just_example_bool');
-    loadJSON('./static/example/land_example.bool.json', 'land_example_bool');
-    loadJSON('./static/example/prog_example.bool.json', 'prog_example_bool');
-    loadJSON('./static/example/reach_example.bool.json', 'reach_example_bool');
-    loadJSON('./static/example/val_example.bool.json', 'val_example_bool');
+    loadJSON('./static/example/app_example.gen.json', 'app_example_gen');
+    loadJSON('./static/example/areach_example.gen.json', 'areach_example_gen');
+    loadJSON('./static/example/just_example.gen.json', 'just_example_gen');
+    loadJSON('./static/example/land_example.gen.json', 'land_example_gen');
+    loadJSON('./static/example/prog_example.gen.json', 'prog_example_gen');
+    loadJSON('./static/example/reach_example.gen.json', 'reach_example_gen');
+    loadJSON('./static/example/val_example.gen.json', 'val_example_gen');
+    loadJSON('./static/example/nexta_example.gen.json', 'nexta_example_gen');
     
   </script>
 
@@ -68,36 +69,6 @@ About Action, Change, And Planning</title>
     }
 </style>
 
-<script>
-  function loadJSON(file, elementId) {
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-              document.getElementById(elementId).textContent = xhr.responseText;
-              hljs.highlightElement(document.getElementById(elementId));
-          }
-      };
-      xhr.open('GET', file, true);
-      xhr.send();
-  }
-
-  loadJSON('./static/example/app_example.bool.json', 'app_example_bool');
-  loadJSON('./static/example/areach_example.bool.json', 'areach_example_bool');
-  loadJSON('./static/example/just_example.bool.json', 'just_example_bool');
-  loadJSON('./static/example/land_example.bool.json', 'land_example_bool');
-  loadJSON('./static/example/prog_example.bool.json', 'prog_example_bool');
-  loadJSON('./static/example/reach_example.bool.json', 'reach_example_bool');
-  loadJSON('./static/example/val_example.bool.json', 'val_example_bool');
-
-  loadJSON('./static/example/app_example.mcq.json', 'app_example_mcq');
-  loadJSON('./static/example/areach_example.mcq.json', 'areach_example_mcq');
-  loadJSON('./static/example/just_example.mcq.json', 'just_example_mcq');
-  loadJSON('./static/example/land_example.mcq.json', 'land_example_mcq');
-  loadJSON('./static/example/prog_example.mcq.json', 'prog_example_mcq');
-  loadJSON('./static/example/reach_example.mcq.json', 'reach_example_mcq');
-  loadJSON('./static/example/val_example.mcq.json', 'val_example_mcq');
-  
-</script>
 </head>
 
 <body>
@@ -179,6 +150,16 @@ About Action, Change, And Planning
                       <!-- 🔗 -->
                     </span>
                     <span>Dataset</span>
+                  </a>
+                </span>
+                <!-- Evaluation Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/EleutherAI/lm-evaluation-harness/blob/main/lm_eval/tasks/acpbench/README.md"
+                    class="external-link button is-normal is-rounded is-dark">
+                     <span class="icon">
+                      <i class="fas fa-check"></i>
+                    </span>
+                    <span>Evaluation</span>
                   </a>
                 </span>
               </div>
@@ -341,34 +322,15 @@ obtaining such actions.
               <img src="static/images/ACPBench_hard_small.png" alt="data-overview" style="max-width: 100%;">
               <img src="static/images/ACPBench_hard_large.png" alt="data-overview" style="max-width: 100%;">
                <img src="static/images/spider_GPT-4o.png" alt="data-overview" style="max-width: 100%;">
+               <p>
+                A domain-wise analysis of the performance of GPT-4o on all of ACPBench-Hard tasks. 
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
     
-
-  
-
-    <section class="section">
-      <div class="container">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <div class="content has-text-justified">
-              <p>
-                A domain-wise analysis of the performance of LLMs on multi-choice questions. This analysis showcases the top 8 performing models. The average performance of these top-8 models is shown as the dotted line in black. This indicates that 
-                across models no specific domain seems too easy. However, Rovers, FloorTile, Blocksworld, Alfworld and Satellite domains pose the greatest challenges to LLMs, in that particular order. 
-              </p>
-            </div>
-            <div class="content box has-text-justified">
-              <span style="color:#ff6864;font-weight:600">
-                While the largest LLMs achieve more than 80% accuracy on few tasks, the variance in performance across tasks and across LLMs is still big. This signifies the long way to go before they can be reliably used in practical scenarios.
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
   <!-- @PAN TODO: bibtex -->

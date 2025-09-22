@@ -71,6 +71,16 @@
   loadJSON('./static/example/reach_example.mcq.json', 'reach_example_mcq');
   loadJSON('./static/example/val_example.mcq.json', 'val_example_mcq');
   
+
+    
+  loadJSON('./static/example/app_example.gen.json', 'app_example_gen');
+  loadJSON('./static/example/areach_example.gen.json', 'areach_example_gen');
+  loadJSON('./static/example/just_example.gen.json', 'just_example_gen');
+  loadJSON('./static/example/land_example.gen.json', 'land_example_gen');
+  loadJSON('./static/example/prog_example.gen.json', 'prog_example_gen');
+  loadJSON('./static/example/reach_example.gen.json', 'reach_example_gen');
+  loadJSON('./static/example/val_example.gen.json', 'val_example_gen');
+  loadJSON('./static/example/nexta_example.gen.json', 'nexta_example_gen');
 </script>
 </head>
 
@@ -119,17 +129,17 @@
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>Paper</span>
+                    <span>ACPBench</span>
                   </a>
                 </span>
-                <!-- Blog Link. -->
+                <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="./blog.html"
+                  <a href="https://arxiv.org/abs/2503.24378"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="fas fa-blog"></i>
+                      <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>Blog</span>
+                    <span>ACPBench-Hard</span>
                   </a>
                 </span>
                 <!-- Code Link. -->
@@ -152,6 +162,16 @@
                       <!-- 🔗 -->
                     </span>
                     <span>Dataset</span>
+                  </a>
+                </span>
+                 <!-- Evaluation Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/EleutherAI/lm-evaluation-harness/blob/main/lm_eval/tasks/acpbench/README.md"
+                    class="external-link button is-normal is-rounded is-dark">
+                     <span class="icon">
+                      <i class="fas fa-check"></i>
+                    </span>
+                    <span>Evaluation</span>
                   </a>
                 </span>
               </div>
@@ -205,7 +225,7 @@ across LLMs is still big. This signifies the long way to go before they can be r
     <section class="hero is-small">
       <div class="content has-text-centered">
         <h1 class="title is-1 subsection is-light ">
-          <span class="subsection" style="vertical-align: middle">ACPBench Overview</span>
+          <span class="subsection" style="vertical-align: middle">ACPBench</span>
         </h1>
       </div>
     </section>
@@ -218,7 +238,7 @@ across LLMs is still big. This signifies the long way to go before they can be r
         <div class="column is-four-fifths">
           <div class="content has-text-justified">
             <p>
-              ACPBench  consists of 7 reasoning tasks over 13 domains. The 13 domains include 11 classical planning domains, <a href="https://alfworld.github.io"></a>ALFWorld, and a novel Swap domain. The 7 tasks included in ACPBench are Action Applicability (app), Progression (prog), Atom Reachability (reach), Validation (val), Action Reachability (areach), Justification (just), and Landmarks (land).  ACPBench dev and test set is available for download in this <a href="https://github.com/ibm/ACPBench">GitHub Repo</a> as well as on <a href="https://huggingface.co/datasets/ibm/ACPBench">Hugging Face Dataset</a>. 
+              ACPBench  consists of 7 reasoning tasks over 13 domains. The 13 domains include 11 classical planning domains, <a href="https://alfworld.github.io"></a>ALFWorld, and a novel Swap domain. The 7 tasks included in ACPBench are Action Applicability (app), Progression (prog), Atom Reachability (reach), Validation (val), Action Reachability (areach), Justification (just), and Landmarks (land).  ACPBench dev and test set is available for download in this <a href="https://github.com/ibm/ACPBench">GitHub Repo</a> as well as on <a href="https://huggingface.co/datasets/ibm/ACPBench">Hugging Face Dataset</a>. Read more about the performance of the LLMs on ACPBench <a href="./blog.html">here</a>.
             <ul>
               <li><b>Dev Set</b>: ACPBench Dev set consists of 40 examples for each task, with answers.
               <li><b>Test Set</b>: ACPBench Test Set features 10 boolean (Bool) and 10 multiple-choice (MCQ) style questions for each domain and each task, <b>with answers</b>. 
@@ -317,6 +337,7 @@ across LLMs is still big. This signifies the long way to go before they can be r
               </div>
             </div>
           </div>
+
           </div>
         </div>
       </div>
@@ -326,6 +347,92 @@ across LLMs is still big. This signifies the long way to go before they can be r
     </div>
   </section>
 
+
+
+    <!-- DATASET SECTION -->
+    <section class="hero is-small">
+      <div class="content has-text-centered">
+        <h1 class="title is-1 subsection is-light ">
+          <span class="subsection" style="vertical-align: middle">ACPBench-Hard</span>
+        </h1>
+      </div>
+    </section>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              ACPBench-Hard consists of 8 reasoning tasks over the same 13 domains as ACPBench. In addition to the 7 tasks on ACPBench, ACPBench-Hard introduces an additional task of generating the next action, that takes us towards the goal. ACPBench-Hard dataset is also released on <a href="https://huggingface.co/datasets/ibm/ACPBench">Hugging Face</a> and is integrated with LM Eval framework for evaluation. The evaluation scripts are also available in the <a href="https://github.com/ibm/ACPBench">github repo</a>.  Read more about the performance of the LLMs on ACPBench-Hard dataset <a href="./acpbench-hard.html">here</a>.
+            <ul>
+              <li><b>Dev Set</b>: ACPBench-Hard Dev set consists of 40 examples for each task.
+              <li><b>Test Set</b>: ACPBench-Hard Test Set features 10 generative questions for each domain and each task. 
+            </ul>
+            </p>
+            Example generative questions:
+            </p>
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="app_example_gen"></code></pre>
+                  <p> Action Applicability</p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="prog_example_gen"></code></pre>
+                  <p> Progression </p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="reach_example_gen"></code></pre>
+                  <p> Atom Reachability</p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="val_example_gen"></code></pre>
+                  <p> Validation</p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="areach_example_gen"></code></pre>
+                  <p> Action Reachability</p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="just_example_gen"></code></pre>
+                  <p> Justification</p>
+                </div>
+              </div>
+              <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="land_example_gen"></code></pre>
+                  <p> Landmarks</p>
+                </div>
+              </div>
+                <div class="box m-5">
+                <div class="content has-text-centered">
+                  <pre><code class="json" id="nexta_example_gen"></code></pre>
+                  <p> Next Action</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
 
 
   <!-- @PAN TODO: bibtex -->
@@ -342,6 +449,17 @@ across LLMs is still big. This signifies the long way to go before they can be r
   publisher    = {{AAAI} Press},
   year         = {2025}
 }</code></pre>
+ <pre><code>@misc{kokel2025acphard,
+      title={ACPBench Hard: Unrestrained Reasoning about Action, Change, and Planning}, 
+      author={Harsha Kokel and Michael Katz and Kavitha Srinivas and Shirin Sohrabi},
+      year={2025},
+      eprint={2503.24378},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2503.24378}, 
+}
+</code></pre>
+
     </div>
   </section>
 
