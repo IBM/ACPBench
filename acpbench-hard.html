@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A Benchmark for Evaluating Reasoning about Action, Change and Planning">
+  <meta name="keywords" content="ACPBench, ACP Bench">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>ACPBench-Hard: Unrestrained Reasoning
+About Action, Change, And Planning</title>
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+
+  <script>
+    function loadJSON(file, elementId) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById(elementId).textContent = xhr.responseText;
+                hljs.highlightElement(document.getElementById(elementId));
+            }
+        };
+        xhr.open('GET', file, true);
+        xhr.send();
+    }
+  
+    loadJSON('./static/example/app_example.bool.json', 'app_example_bool');
+    loadJSON('./static/example/areach_example.bool.json', 'areach_example_bool');
+    loadJSON('./static/example/just_example.bool.json', 'just_example_bool');
+    loadJSON('./static/example/land_example.bool.json', 'land_example_bool');
+    loadJSON('./static/example/prog_example.bool.json', 'prog_example_bool');
+    loadJSON('./static/example/reach_example.bool.json', 'reach_example_bool');
+    loadJSON('./static/example/val_example.bool.json', 'val_example_bool');
+    
+  </script>
+
+  <style>
+    pre {
+        max-height: 400px; 
+        overflow-x: auto; 
+        overflow-y: auto;
+        background-color: #f0f0f0; 
+        padding: 10px;
+        border: 1px solid #ccc; 
+        text-align: left;
+    }
+</style>
+
+<script>
+  function loadJSON(file, elementId) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+              document.getElementById(elementId).textContent = xhr.responseText;
+              hljs.highlightElement(document.getElementById(elementId));
+          }
+      };
+      xhr.open('GET', file, true);
+      xhr.send();
+  }
+
+  loadJSON('./static/example/app_example.bool.json', 'app_example_bool');
+  loadJSON('./static/example/areach_example.bool.json', 'areach_example_bool');
+  loadJSON('./static/example/just_example.bool.json', 'just_example_bool');
+  loadJSON('./static/example/land_example.bool.json', 'land_example_bool');
+  loadJSON('./static/example/prog_example.bool.json', 'prog_example_bool');
+  loadJSON('./static/example/reach_example.bool.json', 'reach_example_bool');
+  loadJSON('./static/example/val_example.bool.json', 'val_example_bool');
+
+  loadJSON('./static/example/app_example.mcq.json', 'app_example_mcq');
+  loadJSON('./static/example/areach_example.mcq.json', 'areach_example_mcq');
+  loadJSON('./static/example/just_example.mcq.json', 'just_example_mcq');
+  loadJSON('./static/example/land_example.mcq.json', 'land_example_mcq');
+  loadJSON('./static/example/prog_example.mcq.json', 'prog_example_mcq');
+  loadJSON('./static/example/reach_example.mcq.json', 'reach_example_mcq');
+  loadJSON('./static/example/val_example.mcq.json', 'val_example_mcq');
+  
+</script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title is-bold">
+              <img src="static/images/ACP_BW.png" style="width:1em;vertical-align: middle" alt="Logo">
+              <span class="subsection" style="vertical-align: middle">ACPBench-Hard</span>
+            </h1>
+            <h2 class="subtitle is-3 publication-subtitle">
+              Unrestrained Reasoning
+About Action, Change, And Planning
+            </h2>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://harshakokel.com">Harsha Kokel</a>,
+              </span>
+              <span class="author-block"><a href="https://ctpelok77.github.io/">Michael Katz</a>,
+              </span>
+              <span class="author-block">Kavitha Srinivas,
+              </span>
+              <span class="author-block">Shirin Sohrabi
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"> <img src="static/images/IBM_research.png" style="height:2em;vertical-align: text-bottom" alt="Logo"></span><br>
+              <span class="author-block"><a href="mailto:harsha.kokel@ibm.com">harsha.kokel@ibm.com</a>, 
+                 <a href="mailto:michael.katz1@ibm.com">michael.katz1@ibm.com</a>, 
+                 <a  href="mailto:kavitha.srinivas@ibm.com">kavitha.srinivas@ibm.com</a>,
+                 <a  href="mailto:ssohrab@us.ibm.com">ssohrab@us.ibm.com</a>
+                </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                
+                <span class="link-block">
+                  <a href="./index.html"
+                    class="external-link button is-normal is-rounded is-dark" style="text-decoration:none">
+                    <span class="icon">
+                      <i class="fas fa-home"></i>
+                    </span>
+                    <span>Homepage</span>
+                  </a>
+                </span>
+            
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2503.24378"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/ibm/ACPBench"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/ibm/ACPBench"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <!-- <i class="far fa-images"></i> -->
+                      <p style="font-size:18px">🤗</p>
+                      <!-- 🔗 -->
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+    
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- <section class="section">
+    <div class="container" style="margin-bottom: 2vh;">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              ACPBench-Hard is a generative version of ACPBench. It contains
+open-ended, generative versions of questions for 8 tasks and evaluators, which scores
+a possible answer to the open-ended questions.
+            </p>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </section> -->
+      
+
+    <!-- TASK SECTION -->
+    <!-- <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 subsection is-light ">
+          <span class="subsection" style="vertical-align: middle">ACPBench-Hard Tasks</span>
+        </h1>
+      </div>
+    </section> -->
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              ACPBench consists of generative questions of the following 8 reasoning tasks.
+            <ul>
+              <li><b>Action Applicability (app)</b> : The first task deals with identifying which actions are applicable in a state. 
+                <div class="box m-5">
+                  <div class="content has-text-centered">
+                    <pre><code class="json" id="app_example_gen"></code></pre>
+                    <p> Action Applicability</p>
+                  </div>
+                </div></li>
+              <li><b>Progression (prog)</b> : The next task evaluates LLMs ability to understand how the world state changes
+by action application.
+                <div class="box m-5">
+                  <div class="content has-text-centered">
+                    <pre><code class="json" id="prog_example_gen"></code></pre>
+                    <p> Progression </p>
+                  </div>
+                </div>
+              </li>
+              <li><b>Atom Reachability (reach)</b> : The reachability task evaluates if a specific fact can eventually become true by
+taking (possibly multiple consecutive) actions in the given state.
+                <div class="box m-5">
+                  <div class="content has-text-centered">
+                    <pre><code class="json" id="reach_example_gen"></code></pre>
+                    <p> Atom Reachability</p>
+                  </div>
+                </div>
+              </li>
+
+              <li><b>Action Reachability (areach)</b> :
+                 The action reachability task is closely related to the atom reachability,
+checking whether there is a reachable state where the action is applicable.
+                <div class="box m-5">
+                  <div class="content has-text-centered">
+                    <pre><code class="json" id="areach_example_gen"></code></pre>
+                    <p> Action Reachability</p>
+                  </div>
+                </div>
+              </li>
+              <li><b>Validation (val)</b> : The validation task aims at checking whether the specified sequence of actions πis
+a plan.
+                <div class="box m-5">
+                  <div class="content has-text-centered">
+                    <pre><code class="json" id="val_example_gen"></code></pre>
+                    <p> Validation</p>
+                  </div>
+                </div>
+              </li>
+              <li><b>Justification (just)</b> :
+                The Justification task asks to simplify the plan by removing one or two consecutive actions
+and to produce the resulting simplified plan.
+<div class="box m-5">
+  <div class="content has-text-centered">
+    <pre><code class="json" id="just_example_gen"></code></pre>
+    <p> Justification</p>
+  </div>
+</div>
+                </li>
+                <li><b> Landmarks (land)</b> : The Landmarks task tests LLM’s ability to identify subgoals that are necessary to
+achieve the goal. 
+                  <div class="box m-5">
+                    <div class="content has-text-centered">
+                      <pre><code class="json" id="land_example_gen"></code></pre>
+                      <p> Landmarks</p>
+                    </div>
+                  </div>
+                </li>
+                 <li><b> Next Action (nexta)</b> : An additional task that does not appear in the original ACPBench is the next
+action task. This generative question asks what is the next action that takes us towards the goal.
+This task is closely related to optimal planning, since optimal plans can be produced by iteratively
+obtaining such actions. 
+                  <div class="box m-5">
+                    <div class="content has-text-centered">
+                      <pre><code class="json" id="land_example_nexta"></code></pre>
+                      <p> Landmarks</p>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+            </p>
+           
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+
+    <!-- Experimental Results -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 subsection is-light ">
+          <span class="subsection" style="vertical-align: middle"> LLMs' Performance Evaluation</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+                
+    
+          <div class="container is-max-desktop content">
+              
+            <div class="content  is-centered ">
+    
+              <img src="static/images/ACPBench_hard_small.png" alt="data-overview" style="max-width: 100%;">
+              <img src="static/images/ACPBench_hard_large.png" alt="data-overview" style="max-width: 100%;">
+               <img src="static/images/spider_GPT-4o.png" alt="data-overview" style="max-width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+  
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified">
+              <p>
+                A domain-wise analysis of the performance of LLMs on multi-choice questions. This analysis showcases the top 8 performing models. The average performance of these top-8 models is shown as the dotted line in black. This indicates that 
+                across models no specific domain seems too easy. However, Rovers, FloorTile, Blocksworld, Alfworld and Satellite domains pose the greatest challenges to LLMs, in that particular order. 
+              </p>
+            </div>
+            <div class="content box has-text-justified">
+              <span style="color:#ff6864;font-weight:600">
+                While the largest LLMs achieve more than 80% accuracy on few tasks, the variance in performance across tasks and across LLMs is still big. This signifies the long way to go before they can be reliably used in practical scenarios.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- @PAN TODO: bibtex -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3 has-text-centered">BibTeX</h2>
+      <pre><code>@misc{kokel2025acphard,
+      title={ACPBench Hard: Unrestrained Reasoning about Action, Change, and Planning}, 
+      author={Harsha Kokel and Michael Katz and Kavitha Srinivas and Shirin Sohrabi},
+      year={2025},
+      eprint={2503.24378},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2503.24378}, 
+}
+</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div class="container is-max-desktop content">
+    <div class="content has-text-centered">
+      To evaluate your LLM on ACP Bench, please consult the <a href="https://github.com/ibm/ACPBench">Readme</a> for instructions. If you have any questions or feedback, feel free to contact Harsha Kokel at harsha.kokel@ibm.com.</br></br></br></br>
+    </div>
+    </div>
+  </section>
+  <section></section>
+
+  <footer class="footer">
+    <!-- <div class="container"> -->
+    
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a>, <a href="https://mathvista.github.io/">MathVista</a>, and <a href="https://osu-nlp-group.github.io/TravelPlanner/">TravelPlanner</a> licensed under a <a
+              rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </footer>
+
+</body>
+
+</html>
