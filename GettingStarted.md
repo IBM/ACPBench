@@ -99,24 +99,15 @@ python evaluation_bool_mcq.py --results <results-json-filepath> --gt <ground-tru
 
 ## ACPBench Hard
 
-We release dev and test sets for 8 tasks in ACPBench-Hard in this repo. The dataset is not available on hugging face just yet. To evaluate a model on ACPBench Hard, use the LM-eval-harness and custom evaluation script as shown below.
+We release dev and test sets for 8 tasks in ACPBench-Hard in this repo. The dataset is also available on hugging face. To evaluate a model on ACPBench Hard, use the LM-eval-harness as shown below.
 
 
-### Generate responses from LLM
 
 ```bash
 lm_eval --model <your-model> \
     --model_args <model-args> \
     --tasks acp_bench_hard \
     --output <output-folder> \
-    --log_samples \
-    --include_path ./configs/tasks
+    --log_samples 
 ```
 
-### Evaluate the output
-
-> :exclamation: Install the python [requirements](./requirements.txt) in your environment.
-
-```bash
-python ./src/evaluate_gen.py <output-folder>
-```
