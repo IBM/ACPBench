@@ -4,7 +4,7 @@
 <p align="center">
     <a href="https://ibm.github.io/ACPBench">🏠 Homepage</a> •
     <a href="https://arxiv.org/abs/2410.05669">📄 Paper</a> •
-    <a href="https://huggingface.co/datasets/ibm/ACPBench">🤗 Dataset</a>
+    <a href="https://huggingface.co/datasets/ibm-research/acp_bench">🤗 Dataset</a>
 </p>
 <p align="center">
     <a href="./README.md"> 📖 README</a> •
@@ -19,15 +19,13 @@
 
 > [!TIP]
 >
-> [ACPBench](https://ibm.github.io/ACPBench) ❤️ [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) ❤️ [hugging-face](https://huggingface.co/datasets/ibm/ACPBench)! 
+> [ACPBench](https://ibm.github.io/ACPBench) ❤️ [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) ❤️ [hugging-face](https://huggingface.co/datasets/ibm-research/acp_bench) ❤️ [Inspect-AI](https://inspect.aisi.org.uk/tasks.html#hugging-face)! 
 >
-> ACPBench is integrated with lm-evaluation-harness and hugging-face to facilitate quick evaluation of existing pretrained models as well as custom finetuned models.
-
-
-
-> [!IMPORTANT]
+> ACPBench and ACPBench Hard are integrated with lm-evaluation-harness and hugging-face to facilitate quick evaluation of existing pretrained models as well as custom finetuned models.
 >
-> [ACPBench Hard](https://openreview.net/forum?id=cfsVixNuJw) dataset is now available in this repo. Scroll down to see how to get started.
+> ACPBench is also compatible with [Inspect-AI](https://inspect.aisi.org.uk/tasks.html#hugging-face).
+
+
 
 
 ## ACPBench
@@ -56,6 +54,14 @@ lm_eval --model <your-model> \
 > [!IMPORTANT]
 >
 > To evaluate your model on ACPBench test set using LM-eval-harness, update the `test_split` in the yaml file to `test`.
+
+**Using Inspect-AI**
+
+To evaluate your model on ACPBench test set using Inspect-AI, use the following command.
+
+```
+inspect eval hf/ibm-research/acp_bench --model <your-model>
+```
 
 **Custom**
 
