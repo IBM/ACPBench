@@ -16,56 +16,85 @@
 
 # 🔥 Getting Started
 
-
 > [!TIP]
 >
-> [ACPBench](https://ibm.github.io/ACPBench) ❤️ [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) ❤️ [hugging-face](https://huggingface.co/datasets/ibm-research/acp_bench) ❤️ [Inspect-AI](https://inspect.aisi.org.uk/tasks.html#hugging-face)! 
+> [ACPBench](https://ibm.github.io/ACPBench) ❤️ [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) ❤️ [hugging-face](https://huggingface.co/datasets/ibm-research/acp_bench) ❤️ [Inspect-AI](https://inspect.aisi.org.uk/tasks.html#hugging-face)!
 >
-> ACPBench and ACPBench Hard are integrated with lm-evaluation-harness and hugging-face to facilitate quick evaluation of existing pretrained models as well as custom finetuned models.
->
-> ACPBench is also compatible with [Inspect-AI](https://inspect.aisi.org.uk/tasks.html#hugging-face).
+> ACPBench and ACPBench-Hard are integrated with **two powerful evaluation frameworks** to facilitate quick evaluation of existing pretrained models as well as custom finetuned models.
 
+## 📊 Evaluation Methods
 
+ACPBench supports **two primary evaluation methods** for both ACPBench and ACPBench-Hard datasets:
 
+1. **[lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)** by EleutherAI
+2. **[Inspect AI](https://inspect.aisi.org.uk/)** by UK AI Security Institute.
 
-## ACPBench
+---
 
-We release dev and test sets for each task in this repo. The dev set contains 40 examples with answers that can be used for validation, development purposes. Refer to the [development guide](#development-guide) below to see how to quickly estimate the performance of your model on dev or test set. 
+## 🎯 ACPBench Evaluation
 
-### Development Guide
+### Method 1: Using lm-eval-harness
 
-You can either use your model with lm-eval-harness or custom implementation to generate outputs. We provide lm-eval-harness config files for evaluation. For custom implementation, you can either use ['exact_match' metric](https://huggingface.co/spaces/evaluate-metric/exact_match) from hugging face, or produce json file consistent with lm-eval-harness and use the provided [evaluation_script.py](./evaluation_script.py). 
+Evaluate your model on ACPBench using the following command:
 
-
-**Using LM-eval-harness**
-
-
-To evaluate your model on ACPBench test set using LM-eval-harness, use the following command.
-
-
-```
+```bash
 lm_eval --model <your-model> \
     --model_args <model-args> \
     --tasks acp_bench \
     --output <output-folder> \
-    --log_samples 
+    --log_samples
 ```
 
-> [!IMPORTANT]
->
-> To evaluate your model on ACPBench test set using LM-eval-harness, update the `test_split` in the yaml file to `test`.
 
-**Using Inspect-AI**
+### Method 2: Using Inspect AI
 
-To evaluate your model on ACPBench test set using Inspect-AI, use the following command.
+Evaluate your model on ACPBench using either of these commands:
 
-```
+**Option A: Direct HuggingFace integration**
+```bash
 inspect eval hf/ibm-research/acp_bench --model <your-model>
 ```
 
-**Custom**
+**Option B: Local evaluation script**
+```bash
+inspect eval evals/acpbench.py --model <your-model>
+```
 
-To use [evaluation_script.py](./evaluation_script.py) to obtain the score, dump the generated outputs for each example in the lm-eval format shown below. Here, `doc` is the original example, `resp` is the generated response (showing 5 samples here) from the model and `filtered_resps` is the answer to the question (obtained by processing the `resp`). 
+---
+
+## 🔥 ACPBench-Hard Evaluation
+
+ACPBench-Hard includes 8 challenging tasks with dev and test sets available both in this repository and on HuggingFace.
+
+### Method 1: Using lm-eval-harness
+
+Evaluate your model on ACPBench-Hard using the following command:
+
+```bash
+lm_eval --model <your-model> \
+    --model_args <model-args> \
+    --tasks acp_bench_hard \
+    --output <output-folder> \
+    --log_samples
+```
+
+### Method 2: Using Inspect AI
+
+Evaluate your model on ACPBench-Hard using the local evaluation script:
+
+```bash
+inspect eval evals/acpbench_hard.py --model <your-model>
+```
+
+---
+
+## 🛠️ Custom Evaluation (Advanced)
+
+For custom implementations, you can use the ['exact_match' metric](https://huggingface.co/spaces/evaluate-metric/exact_match) from HuggingFace or generate outputs in lm-eval-harness format and use the provided evaluation scripts.
+
+### Output Format
+
+Generate outputs for each example in the following lm-eval format:
 
 ```json
 [  {
@@ -77,7 +106,7 @@ To use [evaluation_script.py](./evaluation_script.py) to obtain the score, dump 
           "question": "Is the following action applicable in this state: travel by sea from location l1 to location l0?",
           "answer": "yes"
         },
-    "resp": [["... Therefore, the answer is Yes", 
+    "resp": [["... Therefore, the answer is Yes",
               "... the answer is Yes",
               "Yes",
               "The answer is yes",
@@ -96,24 +125,10 @@ To use [evaluation_script.py](./evaluation_script.py) to obtain the score, dump 
 ]
 ```
 
-Once the json file is created for a task, you can use the the following command to print the score
+### Evaluation Script
+
+Once the JSON file is created, use the evaluation script to compute scores:
 
 ```bash
 python evaluation_bool_mcq.py --results <results-json-filepath> --gt <ground-truth-json-filepath>
 ```
-
-
-## ACPBench Hard
-
-We release dev and test sets for 8 tasks in ACPBench-Hard in this repo. The dataset is also available on hugging face. To evaluate a model on ACPBench Hard, use the LM-eval-harness as shown below.
-
-
-
-```bash
-lm_eval --model <your-model> \
-    --model_args <model-args> \
-    --tasks acp_bench_hard \
-    --output <output-folder> \
-    --log_samples 
-```
-

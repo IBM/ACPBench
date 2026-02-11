@@ -3,23 +3,42 @@
 <p align="center">
     <a href="https://ibm.github.io/ACPBench">🏠 Homepage</a> •
     <a href="https://arxiv.org/abs/2410.05669">📄 Paper</a> •
-    <a href="https://huggingface.co/datasets/ibm/ACPBench">🤗 Dataset</a>
+    <a href="https://huggingface.co/datasets/ibm-research/acp_bench">🤗 Dataset</a>
 </p>
 <p align="center">
     <a href="./GettingStarted.md">🔥 Getting Started</a> •
-    <a href="https://youtu.be/zlIOeYlo52M">▶️ Recording</a> •
     <a href="#-citation">📜 Citation</a> •
     <a href="#-acknowledgement">🙏 Acknowledgement</a> 
 </p>
 
+## 📰 News
 
-> [!IMPORTANT]
+> [!NOTE]
 >
-> [ACPBench Hard](https://openreview.net/forum?id=cfsVixNuJw) dataset is now available in this repo. 
+> - **📝 January 2026**: [ACPBench-Hard](https://openreview.net/forum?id=WIXohR7mEo) accepted at ICLR 2026
+> - **🎓 December 2025**: ACPBench featured in [NeurIPS 2025 Tutorial on Planning in the Era of Language Models](https://slideslive.com/embed/presentation/39053057?&embed_parent_url=https%3A%2F%2Fneurips.cc%2Fvirtual%2F2025%2Floc%2Fsan-diego%2F130335&embed_origin=https%3A%2F%2Fneurips.cc&embed_container_id=presentation-embed-39053057)
+
+> - **🎉 February 2025**: ACPBench presented at [AAAI 2025](https://youtu.be/zlIOeYlo52M) in Philadelphia, PA
+
+
+## Overview
+
+ACPBench is a benchmark designed to evaluate the reasoning capabilities of large language models (LLMs) across Action, Change, and Planning. It includes seven atomic reasoning tasks spanning thirteen domains, offered in two formats: boolean and multiple‑choice. ACPBench‑Hard extends this benchmark by introducing generative question formats and adding an eighth task focused on predicting the next action.
+
+| Task | Abbreviation | Question Types | Description |
+|------|--------------|----------------|-------------|
+| Action Applicability | app | MCQ, Bool, Gen | Tests the ability of an agent to identify which actions are valid and executable in a given state or context. |
+| Progression | prog | MCQ, Bool, Gen | The ability of an agent to understand how the world state changes after performing an action |
+| Atom Reachability | reach | MCQ, Bool, Gen | The ability of an agent to determine whether a specific goal or state can be reached from the current state through a sequence of valid actions. |
+| Validation | val | MCQ, Bool, Gen | The ability of an agent to verify that an action sequence is executable and actually achieves the goal. |
+| Action Reachability | areach | MCQ, Bool, Gen | The ability of an agent to evaluate whether an action can ever become applicable along any valid future trajectory |
+| Action Justification | just | MCQ, Bool, Gen | The ability of an agent to detect an unjustified actions in a plan  and  simply the plan without losing validity or goal achievement |
+| Landmarks | land | MCQ, Bool, Gen | The ability of an agent to recognizes mandatory subgoals that every valid plan must pass through. |
+| Next Action | nexta | Gen | Choosing the right next step is what turns understanding into purposeful action | 
 
 
 
-ACPBench is a dataset to evaluate reasoning ability of LLMs about Action, Change, and Planning. It consists of 7 tasks.
+
 
 **1. Applicability (app)**, checks which actions are applicable in a state. 
 
@@ -343,6 +362,8 @@ Example:
   },
 ```
 
+**8. Next Action (nexta)**, checks whether a model can take a step closer to the goal.
+
 
 
 </details>
@@ -357,6 +378,9 @@ Example:
 > ACP Bench is an evolving dataset collection. We may add different tasks and domains to this collection in time. 
 
 
+
+
+
 ## 📜 Citation
 ```
 @inproceedings{kokel2025acp
@@ -368,6 +392,19 @@ Example:
   booktitle    = {{AAAI}},
   publisher    = {{AAAI} Press},
   year         = {2025}
+}
+```
+
+```
+@inproceedings{kokel2026acphard
+  author       = {Harsha Kokel and
+                  Michael Katz and
+                  Kavitha Srinivas and
+                  Shirin Sohrabi},
+  title        = {{ACPBench Hard}: Unrestrained Reasoning about Action, Change, and Planning},
+  booktitle    = {{ICLR}},
+  publisher    = {OpenReview.net},
+  year         = {2026}
 }
 ```
 
