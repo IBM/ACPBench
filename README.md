@@ -13,7 +13,7 @@
 
 ## 📰 News
 
-
+> - **:pushpin: October 2026**: You can bring your own domains to ACPBench dataset. [ACPBenchGenerator](https://github.com/ibm/ACPBenchGenerator?tab=readme-ov-file) is now public. 
 > - **📝 January 2026**: [ACPBench-Hard](https://openreview.net/forum?id=WIXohR7mEo) accepted at ICLR 2026
 > - **🎓 December 2025**: ACPBench featured in [NeurIPS 2025 Tutorial on Planning in the Era of Language Models](https://slideslive.com/embed/presentation/39053057?&embed_parent_url=https%3A%2F%2Fneurips.cc%2Fvirtual%2F2025%2Floc%2Fsan-diego%2F130335&embed_origin=https%3A%2F%2Fneurips.cc&embed_container_id=presentation-embed-39053057)
 > - **🎉 February 2025**: ACPBench presented at [AAAI 2025](https://youtu.be/zlIOeYlo52M) in Philadelphia, PA
